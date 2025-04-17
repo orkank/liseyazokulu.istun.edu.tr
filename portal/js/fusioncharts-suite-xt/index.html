@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>React - FusionCharts</title>
+    <script src="/admin/assets/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/admin/js/fusioncharts-suite-xt/js/fusioncharts.js"></script>
+    <script type="text/javascript" src="/admin/js/fusioncharts-suite-xt/js/fusioncharts.charts.js"></script>
+    <script type="text/javascript" src="/admin/js/fusioncharts-suite-xt/js/fusioncharts.powercharts.js"></script>
+    <script type="text/javascript" src="/admin/js/fusioncharts-suite-xt/integrations/jquery/js/jquery-fusioncharts.js"></script>
+    <script type="text/javascript" src="/admin/js/fusioncharts-suite-xt/js/themes/fusioncharts.theme.fusion.js"></script>
+</head>
+<body>
+  <style>
+  #chart-container {
+    width: 500px;
+    height: 450px;
+  }
+  .raphael-group-24-creditgroup {
+    display: none !important;
+  }
+  </style>
+  <div id="chart-container">FusionCharts XT will load here!</div>
+</body>
+
+<script>
+$(document).ready(function(){
+
+  $("#chart-container").insertFusionCharts({
+     type: "pie2d",
+     width: "100%",
+     height: "100%",
+     dataFormat: "json",
+     dataSource: {
+    "chart": {
+      "caption": "Recommended Portfolio Split",
+      "subcaption": "For a net-worth of $1M",
+      "showvalues": "1",
+      "showpercentintooltip": "1",
+      "numberprefix": "₺",
+      "enablemultislicing": "1",
+      "theme": "fusion"
+    },
+    "data": [
+      {
+        "label": "Equity",
+        "value": "300000"
+      },
+      {
+        "label": "Debt",
+        "value": "230000"
+      },
+      {
+        "label": "Bullion",
+        "value": "180000"
+      },
+      {
+        "label": "Real-estate",
+        "value": "270000"
+      },
+      {
+        "label": "Insurance",
+        "value": "20000"
+      }
+    ]
+  }
+  });
+
+});
+</script>

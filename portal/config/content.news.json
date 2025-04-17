@@ -1,0 +1,229 @@
+{
+  "tabs": {
+    "0": {
+      "name": "Haber Bilgileri",
+      "inputs": [
+        {
+          "slug": "name",
+          "name": "Başlık",
+          "type": "text",
+          "multilanguage": "1",
+          "keywords": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        {
+          "slug": "content_short",
+          "grid": "col-12 col-md-6",
+          "name": "Haber Kısa Metin",
+          "type": "textarea",
+          "keywords": "2",
+          "data": {
+            "editor": "0"
+          },
+          "multilanguage": "1",
+          "column": "2"
+        },
+        {
+          "slug": "ndate",
+          "grid": "col-12 col-md-6",
+          "name": "Haber Tarihi",
+          "type": "datepicker",
+          "data": {
+            "style": "inline",
+            "todayHighlight": "1"
+          },
+          "validation": {
+            "require": "true"
+          }
+        },
+        {
+          "slug": "parent",
+          "name": "Üst Bağlantı",
+          "id": "0",
+          "params": {},
+          "grid": "col-6",
+          "type": "parents",
+          "default_value": "2570",
+          "int": "1",
+          "minimumInputLength": "0",
+          "data": {
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          },
+          "multiple": "0"
+        },
+        {
+          "slug": "content",
+          "name": "Haber İçeriği",
+          "type": "textarea",
+          "keywords": "2",
+          "data": {
+            "editor": "2"
+          },
+          "multilanguage": "1",
+          "column": "2"
+        },
+        {
+          "slug": "preview",
+          "name": "Haber Önizleme Fotoğrafı",
+          "module": "uploader",
+          "width": "530",
+          "height": "550",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "grid": "col-6",
+          "multi": "false",
+          "serialize": "1",
+          "types": {
+            "0": {
+              "title": "Görsel Dosyalar",
+              "extensions": "jpg,jpeg,gif,png"
+            }
+          }
+        },
+        {
+          "slug": "gallery",
+          "name": "Haber Fotoğrafları",
+          "module": "uploader",
+          "width": "1920",
+          "grid": "col-6",
+          "height": "900",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "multi": "true",
+          "serialize": "1",
+          "types": {
+            "0": {
+              "title": "Görsel Dosyalar",
+              "extensions": "jpg,jpeg,gif,png"
+            }
+          }
+        },
+        {
+          "slug": "status",
+          "name": "Durum",
+          "column": "status",
+          "int": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "int"
+          },
+          "values": {
+            "0": {
+              "name": "Açık",
+              "value": "1",
+              "checked": "1"
+            },
+            "1": {
+              "name": "Kapalı",
+              "value": "2"
+            },
+            "2": {
+              "name": "Gizli",
+              "value": "3"
+            }
+          },
+          "type": "radio"
+        }
+      ]
+    },
+    "1": {
+      "name": "SEO Seçenekleri",
+      "module": "seo",
+      "inputs": {
+        "0": {
+          "slug": "slug",
+          "type": "text",
+          "data": {
+            "from": "name{%prefix%}",
+            "max": "255",
+            "function": "slug"
+          },
+          "name": "URL Adresi",
+          "multilanguage": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        "1": {
+          "slug": "title",
+          "type": "text",
+          "data": {
+            "max": "65",
+            "function": "alphaLength"
+          },
+          "name": "Title",
+          "multilanguage": "1",
+          "keywords": "1"
+        },
+        "2": {
+          "slug": "desc",
+          "type": "textarea",
+          "data": {
+            "max": "155",
+            "function": "alphaLength"
+          },
+          "name": "Açıklama (Description)",
+          "multilanguage": "1",
+          "keywords": "1"
+        }
+      }
+    },
+    "2": {
+      "name": "Diğer Seçenekler",
+      "inputs": {
+        "0": {
+          "slug": "link",
+          "name": "Dış Bağlantı",
+          "type": "text",
+          "multilanguage": "1"
+        },
+        "1": {
+          "slug": "link_option",
+          "name": "Bağlantı Seçeneği",
+          "values": {
+            "0": {
+              "name": "Yeni Pencere",
+              "value": "1"
+            },
+            "1": {
+              "name": "İç Bağlantı",
+              "value": "2"
+            },
+            "2": {
+              "name": "Kapalı",
+              "value": "3"
+            }
+          },
+          "type": "radio"
+        },
+        "2": {
+          "slug": "default",
+          "name": "Açılış Sayfası",
+          "value": "1",
+          "checked": "0",
+          "type": "switch",
+          "int": "1",
+          "values": {
+            "off": "Hayır",
+            "on": "Evet"
+          }
+        },
+        "3": {
+          "slug": "editor_note",
+          "name": "Editör Notu",
+          "type": "textarea"
+        }
+      }
+    }
+  }
+}

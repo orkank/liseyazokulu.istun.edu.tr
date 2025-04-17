@@ -1,0 +1,64 @@
+<div class="<%$input.grid%>">
+<div class="form-group">
+  <label <%$input.dataAttributes%> for="<%$input.slug%>"><%$input.name%></label>
+
+  <select class="form-control p-0" id="<%$input.slug%>"  name="<%$input.slug%>">
+    <option value="0"><%tr%>Üst Kategori Yok<%/tr%></option>
+    <%foreach from=$input.options item=i%>
+
+    <%if isset($i.subs)%>
+      <optgroup label="<%$i.name%>">
+        <option value="<%$i.id%>"<%if (isset($data.parent) AND $i.id == $data.parent) OR !isset($data.parent) AND $i.id == $module.parent%> selected<%/if%>><%$i.name%></option>
+        <%foreach from=$i.subs item=s%>
+        <%if empty($s.name)%>
+        <%continue%>
+        <%/if%>
+
+          <%if isset($s.subs)%>
+            <option value="<%$s.id%>"<%if (isset($data.parent) AND $s.id == $data.parent) OR !isset($data.parent) AND $s.id == $module.parent%> selected<%/if%>>- <%$s.name%></option>
+
+            <%foreach from=$s.subs item=z%>
+              <%if empty($z.name)%>
+              <%continue%>
+              <%/if%>
+
+              <%if isset($z.subs)%>
+                <option value="<%$z.id%>"<%if (isset($data.parent) AND $z.id == $data.parent) OR !isset($data.parent) AND $z.id == $module.parent%> selected<%/if%>>-- <%$z.name%></option>
+
+                <%foreach from=$z.subs item=e%>
+                  <%if empty($e.name)%>
+                  <%continue%>
+                  <%/if%>
+
+                  <option value="<%$e.id%>"<%if (isset($data.parent) AND $e.id == $data.parent) OR !isset($data.parent) AND $e.id == $module.parent%> selected<%/if%>>--- <%$e.name%></option>
+                  <%if isset($e.subs)%>
+                    <%foreach from=$e.subs item=j%>
+                      <%if empty($j.name)%>
+                        <%continue%>
+                      <%/if%>
+                      <option value="<%$j.id%>"<%if (isset($data.parent) AND $j.id == $data.parent) OR !isset($data.parent) AND $j.id == $module.parent%> selected<%/if%>>---- <%$j.name%></option>
+                    <%/foreach%>
+                  <%/if%>
+                <%/foreach%>
+
+              <%else%>
+                <option value="<%$z.id%>"<%if (isset($data.parent) AND $z.id == $data.parent) OR !isset($data.parent) AND $z.id == $module.parent%> selected<%/if%>>-- <%$z.name%></option>
+              <%/if%>
+
+            <%/foreach%>
+
+          <%else%>
+          <option value="<%$s.id%>"<%if (isset($data.parent) AND $s.id == $data.parent) OR !isset($data.parent) AND $s.id == $module.parent%> selected<%/if%>><%$s.name%></option>
+          <%/if%>
+
+        <%/foreach%>
+      </optgroup>
+    <%else%>
+      <option value="<%$i.id%>"<%if (isset($data.parent) AND $i.id == $data.parent) OR !isset($data.parent) AND $i.id == $module.parent%> selected<%/if%>><%$i.name%></option>
+    <%/if%>
+
+    <%/foreach%>
+  </select>
+  <div class="form-control-feedback"> <small></small> </div>
+</div>
+</div>

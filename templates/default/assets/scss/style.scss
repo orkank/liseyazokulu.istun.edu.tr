@@ -1,0 +1,49 @@
+/*!
+Theme Name: Sandbox - Modern & Multipurpose Bootstrap 5 Template
+Theme URI:	https://sandbox.elemisthemes.com/
+Version:	3.4.1
+Author:		elemis
+*/
+
+// Bootstrap Functions
+@import "bootstrap/scss/functions";
+
+// Theme colors
+@import "theme-colors";
+
+// User variables
+@import 'user-variables';
+
+// Theme variables
+@import "variables";
+
+// Bootstrap configuration
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+//@import "bootstrap/scss/maps";
+@import "theme/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Theme configuration
+@import "theme/functions";
+@import "theme/mixins";
+@import "theme/utilities";
+@import "theme/root";
+
+// Bootstrap layout & components
+@import "bootstrap";
+
+// Theme layout & components
+@import "theme/theme";
+
+// User custom styles
+@import 'user';
+
+@import '../js/node_modules/vanilla-calendar-pro/styles/layout.css';
+@import '../js/node_modules/@fancyapps/ui/dist/fancybox/fancybox.css';
+@import '../js/node_modules/sweetalert2/dist/sweetalert2.min.css';
+
+// Themes
+@import '../js/node_modules/vanilla-calendar-pro/styles/themes/light.css';
+@import '../js/node_modules/vanilla-calendar-pro/styles/themes/dark.css';

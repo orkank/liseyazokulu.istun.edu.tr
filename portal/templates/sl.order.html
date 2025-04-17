@@ -1,0 +1,19 @@
+<div class="<%$input.grid%>">
+  <div class="form-group">
+    <label for="<%$input.slug%>"><%$input.name%></label>
+
+    <div class="subs_sortable d-flex">
+      <%foreach from=$items item=i%>
+        <div class="item h2 badge badge-secondary m-3 p-3">
+          <input type="hidden" name="<%$input.slug%>[]" value="<%$i.id%>"><%$i.name%> <%$i.subname%>
+          <a href="content.sl.php?id=<%$i.id%>" class="mt-2 btn-sm btn btn-secondary btn-block"">Düzenle</a>
+        </div>
+      <%/foreach%>
+    </div>
+
+    <div class="form-control-feedback"> <small></small>
+      <a href="content.sl.php?parent=<%$data.id%>&config=3">Alt Sayfa Ekle</a>
+    </div>
+  </div>
+</div>
+

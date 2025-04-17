@@ -1,0 +1,153 @@
+<div class="<%$input.grid%>">
+
+<!-- sample modal content -->
+<div id="<%$uploader.uniq%>_edit-image" data-images-modal class="modal fade" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><%tr%>Görsel Düzenle<%/tr%></h4>
+            </div>
+            <div class="modal-body">
+              <input type="hidden" disabled name="id" id="id" value="">
+                <div class="row">
+                  <div class="col-md-12">
+                <%if $uploader.multilanguage != '2'%>
+                  <%foreach from=$uploader.values item=i%>
+                    <div class="form-group">
+                      <label for="<%$i.slug%>" class="control-label"><%$i.name%>:</label>
+                      <input class="form-control" name="<%$i.slug%>" id="<%$i.slug%>">
+                    </div>
+                  <%/foreach%>
+                <%else%>
+                  <%foreach from=$uploader.values item=i%>
+                    <div class="form-group">
+                      <label for="<%$uploader.uniq%>_<%$i.slug%>"><%$i.name%></label>
+                      <div class="input-group" id="<%$uploader.uniq%>_<%$i.slug%>">
+
+                        <%foreach from=$langs item=s key=k%>
+                          <input type="text" data-uniq="<%$uploader.uniq%>_<%$i.slug%>{<%$s.prefix%>}" data-wrap="<%$uploader.uniq%>"
+                            class="form-control <%if $k == 0%>active<%else%>inactive<%/if%>" <%$i.dataAttributes%> id="<%$i.slug%>{<%$s.prefix%>}" placeholder="">
+                        <%/foreach%>
+
+                        <div class="input-group-append">
+                          <%foreach from=$langs item=s key=k%>
+                            <a href="#" data-lang="<%$s.prefix%>" data-wrap="<%$uploader.uniq%>_<%$i.slug%>"
+                              data-uniq="<%$uploader.uniq%>_<%$i.slug%>{<%$s.prefix%>}" class="input-group-text<%if $k == 0%> active<%/if%>"><%$s.prefix|upper%></a>
+                          <%/foreach%>
+                        </div>
+                      </div>
+                      <div class="form-control-feedback"> <small><%$uploader.muted%></small> </div>
+                    </div>
+                  <%/foreach%>
+                <%/if%>
+                  </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-cancel class="btn btn-default waves-effect" data-dismiss="modal"><%tr%>Kapat<%/tr%></button>
+              <button type="button" data-images-save data-uniq="<%$uploader.uniq%>_edit-image" class="btn btn-danger waves-effect waves-light"><%tr%>Kaydet<%/tr%></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.modal -->
+
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title m-0"> <%$uploader.name%> </h4>
+    <p class="card-text"> <%$uploader.desc%> </p>
+  </div>
+
+  <%if $uploader.multilanguage == '1'%>
+  <ul class="nav nav-tabs customtab" role="tablist">
+    <%foreach from=$langs item=i key=k%>
+    <li class="nav-item"> <a data-lang="<%$i.prefix|lower%>" class="nav-link<%if $k == 0%> active<%/if%>" data-toggle="tab" href="#uploader_<%$i.id%>_<%$uploader.uniq%>_tab" role="tab">
+      <span class="hidden-sm-up"><%$i.prefix%></span> <span class="hidden-xs-down"><%$i.name%></span></a>
+    </li>
+    <%/foreach%>
+  </ul>
+  <%/if%>
+
+  <div class="tab-content">
+    <input type="hidden" name="images_uniq[<%$uploader.slug%>]" value="<%$uploader.uniq_%>">
+    <%if $uploader.multilanguage == '1'%>
+    <%foreach from=$langs item=i key=k%>
+      <div role="tabpanel" class="tab-pane<%if $k == 0%> active<%/if%>" id="uploader_<%$i.id%>_<%$uploader.uniq%>_tab">
+        <div class="p-0">
+          <div class="card-body" id="<%$uploader.uniq%>_<%$i.id%>_container" style="position: relative;">
+            <div id="<%$uploader.uniq%>_<%$i.id%>_console" class="alert alert-info"><%tr%>Yüklemeye hazır<%/tr%></div>
+
+            <div id="<%$uploader.uniq%>_<%$i.id%>_images" class="sl-gallery col-md-12">
+            </div>
+
+            <button id="<%$uploader.uniq%>_<%$i.id%>_select" class="btn btn-outline-primary waves-effect waves-light" type="button" style="z-index: 1;">
+              <span class="btn-label"> <i class="fas fa-mouse-pointer"></i> </span><%tr%>Dosya Seç<%/tr%></button>
+
+
+            <h4 class="card-title m-t-40"> <%tr%>Kayıtlı Olanlar<%/tr%> </h4>
+            <p class="card-text"> <%tr%>Güncellemek veya silmek için görselin üzerine gelince açılan butonları kullanabilirsiniz<%/tr%> </p>
+
+            <div id="<%$uploader.uniq%>_<%$i.id%>_uploaded" class="images uploader">
+              <%if !empty($uploader.images[$i.prefix])%>
+              <%foreach from=$uploader.images[$i.prefix] item=s%>
+                <a class="media<%if $s.rid == '0'%> not-saved<%/if%>" href="<%$s.images.default%>" data-fancybox>
+                  <button data-rid="<%$s.rid%>" data-group="<%$s.group%>" data-remove-image="<%$s.id%>" class="btn btn-danger waves-effect waves-light" type="button">
+                    <i class="fas fa-trash-alt"></i></button>
+                  <button data-toggle="modal" data-target="#<%$uploader.uniq%>_edit-image" data-edit-image="<%$s.id%>" class="btn btn-primary waves-effect waves-light" type="button">
+                    <i class="fas fa-pencil"></i></button>
+
+                  <%if $s.images.default|pathinfo:$smarty.const.PATHINFO_EXTENSION == 'mp4'%>
+                  <%else%>
+                    <img src="<%$s.images.default%>">
+                  <%/if%>
+                </a>
+              <%/foreach%>
+              <%/if%>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    <%/foreach%>
+    <%else%>
+    <div role="tabpanel" class="tab-pane active" id="<%$uploader.uniq%>_div">
+      <div class="p-0">
+        <div class="card-body" id="<%$uploader.uniq%>_container" style="position: relative;">
+          <div id="<%$uploader.uniq%>_console" class="alert alert-info"><%tr%>Yüklemeye hazır<%/tr%></div>
+
+          <div id="<%$uploader.uniq%>_images" class="sl-gallery col-md-12">
+          </div>
+
+          <button id="<%$uploader.uniq%>_select" class="btn btn-outline-primary waves-effect waves-light" type="button" style="z-index: 1;">
+            <span class="btn-label"> <i class="fas fa-mouse-pointer"></i> </span><%tr%>Dosya Seç<%/tr%></button>
+
+
+          <h4 class="card-title m-t-40"> <%tr%>Kayıtlı Olanlar<%/tr%> </h4>
+          <p class="card-text"> <%tr%>Güncellemek veya silmek için görselin üzerine gelince açılan butonları kullanabilirsiniz<%/tr%> </p>
+
+          <div id="<%$uploader.uniq%>_uploaded" class="images">
+            <%if !empty($uploader.images)%>
+            <%foreach from=$uploader.images item=s%>
+              <a class="media<%if $s.rid == '0'%> not-saved<%/if%>" data-id="<%$s.id%>" href="<%$s.images.default%>" data-fancybox>
+                <button data-rid="<%$s.rid%>" data-group="<%$s.group%>" data-remove-image="<%$s.id%>" class="btn btn-danger waves-effect waves-light" type="button">
+                  <i class="fas fa-trash-alt"></i></button>
+                <button data-toggle="modal" data-target="#<%$uploader.uniq%>_edit-image" data-edit-image="<%$s.id%>" class="btn btn-primary waves-effect waves-light" type="button">
+                  <i class="fas fa-pencil"></i></button>
+                <%if $s.images.default|pathinfo:$smarty.const.PATHINFO_EXTENSION == 'mp4'%>
+                <%else%>
+                  <img src="<%$s.images.default%>">
+                <%/if%>
+              </a>
+            <%/foreach%>
+            <%/if%>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <%/if%>
+
+  </div>
+</div>
+</div>

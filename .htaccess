@@ -1,0 +1,36 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Rewrite base directory
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule . - [L]
+
+#Make PHP code look like unknown types
+#AddType application/x-httpd-php .html
+
+RewriteRule (^|/)system(/|$) - [F]
+
+# Dangreuos Directories
+<Files ~ "^\.ht">
+Order allow,deny
+Deny from all
+Satisfy All
+</Files>
+
+#<IfModule mod_headers.c>
+#  Header set Access-Control-Allow-Origin "https://www.dentistun.com.tr"
+#  Header set Access-Control-Allow-Methods "GET, POST"
+#  #Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, PATCH, OPTIONS"
+#</IfModule>
+
+<Limit OPTIONS PUT PATCH DELETE>
+    Require all denied
+</Limit>
+
+RewriteRule ^(.*)$ index.php?rewrite=$0 [QSA,L]

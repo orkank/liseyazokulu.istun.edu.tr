@@ -1,0 +1,446 @@
+{
+  "table": {
+    "columns": {
+      "0": {
+        "name": "slug",
+        "type": "VARCHAR(255) NULL",
+        "serialize": "false",
+        "multilanguage": "1",
+        "index": "1"
+      },
+      "1": {
+        "name": "name",
+        "type": "VARCHAR(255) NULL",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      "2": {
+        "name": "content",
+        "type": "LONGTEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      "3": {
+        "name": "keywords",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      "4": {
+        "name": "title",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      "5": {
+        "name": "desc",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      "6": {
+        "name": "link",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      }
+    }
+  },
+
+  "tabs": {
+    "0": {
+      "name": "İçerik Bilgileri",
+      "inputs": {
+        "0": {
+          "slug": "name",
+          "name": "Ürün İsmi",
+          "type": "text",
+          "grid": "col-12 col-md-4",
+          "multilanguage": "1",
+          "keywords": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        "1": {
+          "slug": "parent",
+          "name": "Kategorisi",
+          "id": "0",
+          "params": {
+            "parent": "0"
+          },
+          "grid": "col-6",
+          "type": "parents",
+          "default_value": "0",
+          "int": "1",
+          "minimumInputLength": "0",
+          "data": {
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          },
+          "multiple": "0"
+        },
+        "2": {
+          "slug": "linked_pages",
+          "name": "Bağlı Sayfalar",
+          "id": "0",
+          "params": {
+            "parent": "2421"
+          },
+          "grid": "col-6",
+          "type": "parents",
+          "default_value": "0",
+          "int": "1",
+          "minimumInputLength": "0",
+          "data": {
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          },
+          "multiple": "0"
+        },
+        "3": {
+          "slug": "status",
+          "name": "Durum",
+          "column": "status",
+          "grid": "col-12 col-md-6",
+          "int": "1",
+          "validation": {
+            "require": "true",
+            "max": "1",
+            "type": "int"
+          },
+          "values": {
+            "0": {
+              "name": "Açık",
+              "value": "1",
+              "checked": "1"
+            },
+            "1": {
+              "name": "Kapalı",
+              "value": "2"
+            },
+            "2": {
+              "name": "Gizli",
+              "value": "3"
+            }
+          },
+          "type": "radio"
+        },
+        "4": {
+          "slug": "slogan",
+          "name": "Slogan Yazı",
+          "type": "textarea",
+          "grid": "col-12 col-md-6",
+          "data": {
+            "editor": "1"
+          },
+          "multilanguage": "1",
+          "column": "2"
+        },
+        "5": {
+          "slug": "right_content",
+          "name": "Üst Sağ İçerik",
+          "type": "textarea",
+          "grid": "col-12 col-md-6",
+          "data": {
+            "editor": "2"
+          },
+          "multilanguage": "1",
+          "column": "2"
+        },
+
+        "6": {
+          "slug": "page_image",
+          "module": "uploader",
+          "multi": "false",
+          "serialize": "1",
+          "grid": "col-12, col-md-6",
+          "onload": "1",
+          "name": "Sayfa Görseli",
+          "crop": "0",
+          "params": {
+          },
+          "types": {
+            "0": {"title" : "Görsel veya Video Dosyalar", "extensions" : "webp,svg,jpg,jpeg,gif,png,mp4"}
+          }
+        },
+
+        "7": {
+          "slug": "content",
+          "name": "Ürün Özet Bilgi",
+          "type": "textarea",
+          "grid": "col-12 col-md-12",
+          "template": {
+            "0": {
+              "name": "Şablon 1",
+              "value": "<table class=\"table table-product table-striped\"> <thead> <tr> <th colspan=\"2\" class=\"upper-letter\">Ürün Özellikleri</th> </tr> </thead> <tbody> <tr style=\"height: 42px;\"> <td>Poşet Türü</td> <td>Bardak Poşet</td> </tr> <tr> <td>Poşet Tipi</td> <td>Körüklü</td> </tr> </tbody> </table>"
+            }
+          },
+          "keywords": "2",
+          "data": {
+            "editor": "2"
+          },
+          "multilanguage": "1",
+          "column": "2"
+        }
+      }
+    },
+    "1": {
+      "name": "SEO Seçenekleri",
+      "module": "seo",
+      "inputs": {
+        "0": {
+          "slug": "slug",
+          "type": "text",
+          "data": {
+            "from": "name{%prefix%}",
+            "max": "255",
+            "function": "slug"
+          },
+          "name": "URL Adresi",
+          "multilanguage": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        "1": {
+          "slug": "title",
+          "type": "text",
+          "data": {
+            "max": "65",
+            "function": "alphaLength"
+          },
+          "name": "Title",
+          "multilanguage": "1",
+          "keywords": "1"
+        },
+        "2": {
+          "slug": "desc",
+          "type": "textarea",
+          "data": {
+            "max": "155",
+            "function": "alphaLength"
+          },
+          "name": "Açıklama (Description)",
+          "multilanguage": "1",
+          "keywords": "1"
+        },
+        "3": {
+          "slug": "tags",
+          "type": "textarea",
+          "name": "Metatags",
+          "multilanguage": "1"
+        },
+        "4": {
+          "slug": "robots",
+          "name": "Arama Motorları",
+          "type": "checkbox",
+          "serialize": "0",
+          "values": {
+            "0": {
+              "slug": "index",
+              "value": "1",
+              "name": "Arama Motorlarına İzin Ver (index)",
+              "checked": "1"
+            },
+            "1": {
+              "slug": "noindex",
+              "value": "1",
+              "name": "Listelemesine İzin Verme noindex",
+              "checked": "0"
+            },
+            "2": {
+              "slug": "noarchive",
+              "value": "1",
+              "name": "Arşivlemesine İzin Verme (noarchive)",
+              "checked": "0"
+            },
+            "3": {
+              "slug": "nosnippet",
+              "value": "1",
+              "name": "Listelemede Önizlemeye İzin Verme (nosnippet)",
+              "checked": "0"
+            },
+            "4": {
+              "slug": "notranslate",
+              "value": "1",
+              "name": "Bu Sayfanın Dil Çevirimine İzin Verme (notranslate)",
+              "checked": "0"
+            },
+            "5": {
+              "slug": "noimageindex",
+              "value": "1",
+              "name": "Görsel İçeriklerin Listelenmesine İzin Verme (noimageindex)",
+              "checked": "0"
+            },
+            "6": {
+              "slug": "nofollow",
+              "value": "1",
+              "name": "Bu Sayfadaki Linkleri Takip Etme (nofollow)",
+              "checked": "0"
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "name": "Ürün Fotoğrafları",
+      "inputs": {
+        "0": {
+          "name": "Galeri",
+          "desc": "MP4, JPG, JPEG, PNG, GIF, PDF dosyalarını yükleyebilirsiniz.",
+          "module": "images",
+          "grid": "col-12",
+          "resize": {
+            "0": {
+              "width": "285",
+              "height": "200",
+              "quality": "80"
+            },
+            "1": {
+              "width": "600",
+              "height": "450",
+              "quality": "80"
+            }
+          },
+          "width": "2500",
+          "height": "2500",
+          "crop": "0",
+          "maxfilesize": "50mb",
+          "multi": "true",
+          "multilanguage": "1",
+          "slug": "images",
+          "type": "images",
+          "values": {
+            "0": {
+              "slug": "title",
+              "type": "text",
+              "name": "Title Tag"
+            },
+            "1": {
+              "slug": "alt",
+              "type": "text",
+              "name": "Alt Tag"
+            }
+          }
+        }
+      }
+    },
+    "3": {
+      "name": "Bilgi Sekmeleri",
+      "inputs": {
+        "0": {
+          "grid": "col-12",
+          "name": "Bilgi Sekmeler",
+          "multilanguage": "1",
+          "desc": "",
+          "encode": "1",
+          "editor": "2",
+          "module": "accordion",
+          "slug": "tabs",
+          "type": "accordions"
+        }
+      }
+    },
+    "4": {
+      "name": "Diğer Seçenekler",
+      "inputs": {
+        "0": {
+          "slug": "sl_template",
+          "name": "Şablon",
+          "grid": "col-12 col-md-4",
+          "type": "templates",
+          "data": {
+            "style": "btn-primary",
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          }
+        },
+        "1": {
+          "slug": "link",
+          "name": "Dış Bağlantı",
+          "grid": "col-6 col-md-8",
+          "type": "text",
+          "multilanguage": "1"
+        },
+        "2": {
+          "slug": "link_option",
+          "name": "Bağlantı Seçeneği",
+          "grid": "col-6 col-md-4",
+          "values": {
+            "0": {
+              "name": "Yeni Pencere",
+              "value": "1"
+            },
+            "1": {
+              "name": "İç Bağlantı",
+              "value": "2"
+            },
+            "2": {
+              "name": "Kapalı",
+              "value": "3"
+            }
+          },
+          "type": "radio"
+        },
+        "3": {
+          "slug": "link_clickable",
+          "name": "Sayfa Erişimi",
+          "grid": "col-6 col-md-4",
+          "values": {
+            "0": {
+              "name": "Erişilebilir",
+              "value": "1"
+            },
+            "1": {
+              "name": "Erişilmez (Hayalet)",
+              "value": "2"
+            }
+          },
+          "type": "radio"
+        },
+        "4": {
+          "slug": "editor_note",
+          "name": "Editör Notu",
+          "type": "textarea"
+        },
+        "5": {
+          "slug": "sl_order",
+          "name": "Sıralama",
+          "type": "sl.order",
+          "grid": "col-12",
+          "implode": ",",
+          "data": {
+            "style": "btn-primary",
+            "onload": "1"
+          }
+        }
+      }
+    },
+    "5": {
+      "name": "Parametreler",
+      "inputs": {
+        "0": {
+          "grid": "col-12",
+          "name": "Parametreler",
+          "multilanguage": "1",
+          "editor": "0",
+          "desc": "",
+          "module": "accordion",
+          "slug": "parameters",
+          "type": "accordions"
+        }
+      }
+    }
+  }
+}

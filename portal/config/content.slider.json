@@ -1,0 +1,252 @@
+{
+  "tabs": {
+    "0": {
+      "name": "Slide Bilgileri",
+      "inputs": [
+        {
+          "slug": "name",
+          "name": "Ana Başlık",
+          "type": "text",
+          "multilanguage": "1",
+          "keywords": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        {
+          "slug": "subname",
+          "name": "Alt Başlık",
+          "type": "text",
+          "multilanguage": "1",
+          "keywords": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        {
+          "slug": "link_name1",
+          "name": "Buton 1 Yazı",
+          "grid": "col-6",
+          "type": "text",
+          "multilanguage": "1"
+        },
+        {
+          "slug": "link1",
+          "name": "Buton 1 Bağlantı",
+          "grid": "col-6",
+          "type": "text",
+          "multilanguage": "1"
+        },
+        {
+          "slug": "link_name2",
+          "name": "Buton 2 Yazı",
+          "grid": "col-6",
+          "type": "text",
+          "multilanguage": "1"
+        },
+        {
+          "slug": "link2",
+          "name": "Buton 2 Bağlantı",
+          "grid": "col-6",
+          "type": "text",
+          "multilanguage": "1"
+        },
+        {
+          "slug": "time",
+          "name": "Slide Geçiş Süresi (Saniye)",
+          "grid": "col-6",
+          "type": "text",
+          "default": "3",
+          "multilanguage": "0"
+        },
+        {
+          "slug": "published",
+          "grid": "col-6",
+          "name": "Yayın Tarihi",
+          "type": "datepicker",
+          "data": {
+            "style": "inline",
+            "todayHighlight": "1"
+          },
+          "validation": {
+            "require": "true"
+          }
+        },
+        {
+          "slug": "desktop",
+          "name": "Masaüstü Görseli",
+          "module": "uploader",
+          "resize": "0",
+          "width": "1920",
+          "height": "1000",
+          "quality": "100",
+          "multilanguage": "1",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "multi": "false",
+          "serialize": "1",
+          "grid": "col-12 col-lg-6",
+          "params": {},
+          "types": {
+            "0": {
+              "title": "Görsel veya Video Dosyalar",
+              "extensions": "webp,jpg,jpeg,gif,png,mp4"
+            }
+          }
+        },
+        {
+          "slug": "mobile",
+          "name": "Mobil Görseli",
+          "module": "uploader",
+          "width": "680",
+          "height": "680",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "grid": "col-12 col-lg-6",
+          "multi": "false",
+          "multilanguage": "1",
+          "quality": "100",
+          "serialize": "1",
+          "resize": "0",
+          "types": {
+            "0": {
+              "title": "Görsel veya Video Dosyalar",
+              "extensions": "webp,jpg,jpeg,gif,png,mp4"
+            }
+          }
+        },
+        {
+          "slug": "desktop_video",
+          "name": "Masaüstü Video",
+          "module": "uploader",
+          "resize": "0",
+          "quality": "100",
+          "multilanguage": "1",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "multi": "false",
+          "serialize": "1",
+          "grid": "col-12 col-lg-6",
+          "params": {},
+          "types": {
+            "0": {
+              "title": "Video Dosyalar",
+              "extensions": "mp4"
+            }
+          }
+        },
+        {
+          "slug": "mobile_video",
+          "name": "Mobil Video",
+          "module": "uploader",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "grid": "col-12 col-lg-6",
+          "multi": "false",
+          "multilanguage": "1",
+          "serialize": "1",
+          "resize": "0",
+          "types": {
+            "0": {
+              "title": "Video Dosyalar",
+              "extensions": "mp4"
+            }
+          }
+        },
+        {
+          "slug": "parent",
+          "name": "Üst Bağlantı",
+          "id": "0",
+          "params": {},
+          "grid": "col-4",
+          "type": "parents",
+          "default_value": "0",
+          "int": "1",
+          "minimumInputLength": "0",
+          "data": {
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          },
+          "multiple": "0"
+        },
+        {
+          "slug": "status",
+          "name": "Durum",
+          "column": "status",
+          "int": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "int"
+          },
+          "values": {
+            "0": {
+              "name": "Açık",
+              "value": "1",
+              "checked": "1"
+            },
+            "1": {
+              "name": "Kapalı",
+              "value": "2"
+            }
+          },
+          "type": "radio"
+        },
+        {
+          "slug": "appointment",
+          "name": "Randevu Butonu",
+          "int": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "int"
+          },
+          "values": {
+            "0": {
+              "name": "Göster",
+              "value": "1"
+            },
+            "1": {
+              "name": "Gösterme",
+              "value": "2",
+              "checked": "1"
+            }
+          },
+          "type": "radio"
+        },
+        {
+          "slug": "banner_type",
+          "name": "Slide Türü",
+          "int": "1",
+          "values": [
+            {
+              "name": "Otomatik Oluşturulan",
+              "value": "3",
+              "checked": "1"
+            },
+            {
+              "name": "Tek Görsel",
+              "value": "1"
+            },
+            {
+              "name": "Tek Video",
+              "value": "2"
+            }
+          ],
+          "type": "radio"
+        }
+      ]
+    },
+    "1": {
+      "name": "Sıralama",
+      "module": "subpages",
+      "parent": "module"
+    }
+  }
+}

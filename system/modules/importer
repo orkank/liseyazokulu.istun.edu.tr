@@ -1,0 +1,395 @@
+      if($this->core->get['s']==1){
+        $str = "4S Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;MFP;Sachet
+        4S Serisi;;Makine;Çay;MFP;Demlik Poşet
+        4s Serisi;;Makine;Kahve;MFP;Sachet
+        4S Serisi;;Makine;Kuru Gıdalar;MFP;Sachet
+        590;;Makine;Kahve;IMA Coffee Packaging;Kapsül
+        595;;Makine;Kahve;IMA Coffee Packaging;Kapsül
+        A100;;Makine;Bisküvi, Çikolata, Şekerleme;IMA BFB;Selefon
+        A100;;Makine;Çay;IMA BFB;Selefon
+        A100;;Makine;Temizlik ve Bakım Ürünleri;IMA BFB;Selefon
+        AI Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Ciemme;Kutulama
+        AI Serisi;;Makine;Dondurulmuş Gıdalar;IMA Ciemme;Kutulama
+        AI Serisi;;Makine;Fırın Ürünleri;IMA Ciemme;Kutulama
+        AI Serisi;;Makine;Hazır Yemek;IMA Ciemme;Kutulama
+        AI Serisi;;Makine;Kuru Gıdalar;IMA Ciemme;Kutulama
+        AI Serisi;;Makine;Pet Food;IMA Ciemme;Kutulama
+        Aromapack;;Makine;Bisküvi, Çikolata, Şekerleme;ICA;Dikey Paket
+        Aromapack;;Makine;Fırın Ürünleri;ICA;Dikey Paket
+        Aromapack;;Makine;Kuru Gıdalar;ICA;Dikey Paket
+        Aromapack;;Makine;Temizlik ve Bakım Ürünleri;ICA;Dikey Paket
+        BK II;;Makine;Süt Ürünleri;IMA D&F Hamba;Hazır Kap
+        C Serisi;;Makine;Çay;IMA D&F Hassia;Termoform Kap
+        C Serisi;;Makine;Kahve;IMA D&F Hassia;Termoform Kap
+        C Serisi;;Makine;Pet Food;IMA D&F Hassia;Termoform Kap
+        C Serisi;;Makine;Sıvı Gıdalar;IMA D&F Hassia;Termoform Kap
+        C Serisi;;Makine;Süt Ürünleri;IMA D&F Hassia;Termoform Kap
+        C100;;Makine;Süt Ürünleri;IMA D&F Erca;Termoform Kap
+        C2000;;Makine;Çay;IMA Tea&Herbs;Bardak Poşet
+        C2002;;Makine;Çay;IMA Tea&Herbs;Bardak Poşet
+        C21;;Makine;Çay;IMA R.I.;Bardak Poşet
+        C23;;Makine;Çay;IMA R.I.;Bardak Poşet
+        C24 Serisi;;Makine;Çay;IMA Tea&Herbs;Bardak Poşet
+        C27-E;;Makine;Çay;IMA Tea&Herbs;Bardak Poşet
+        C28-E;;Makine;Çay;IMA Tea&Herbs;Bardak Poşet
+        C51;;Makine;Çay;IMA Tea&Herbs;Demlik Poşet
+        C58;;Makine;Çay;IMA Tea&Herbs;Bardak Poşet
+        C59;;Makine;Çay;IMA Tea&Herbs;Demlik Poşet
+        CA Serisi;;Makine;Kahve;IMA Coffee Packaging;Pod
+        Carrera Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Ilapak;Yatay Paket
+        Carrera Serisi;;Makine;Dondurulmuş Gıdalar;IMA Ilapak;Yatay Paket
+        Carrera Serisi;;Makine;Et, Tavuk, Balık;IMA Ilapak;Yatay Paket
+        Carrera Serisi;;Makine;Fırın Ürünleri;IMA Ilapak;Yatay Paket
+        Carrera Serisi;;Makine;Hazır Yemek;IMA Ilapak;Yatay Paket
+        Carrera Serisi;;Makine;Meyve, Sebze;IMA Ilapak;Yatay Paket
+        Carrera Serisi;;Makine;Pet Food;IMA Ilapak;Yatay Paket
+        Combiseptic;;Makine;Süt Ürünleri;IMA D&F Gasti;Hazır Kap
+        Contitherm;;Makine;Süt Ürünleri;IMA D&F Gasti;Hazır Kap
+        Copparapid Serisi;;Makine;Süt Ürünleri;IMA Benhil;Hazır Kap
+        CP Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA BFB;Kolileme
+        CP Serisi;;Makine;Çay;IMA BFB;Kolileme
+        CP Serisi;;Makine;Dondurulmuş Gıdalar;IMA BFB;Kolileme
+        CP Serisi;;Makine;Fırın Ürünleri;IMA BFB;Kolileme
+        CP Serisi;;Makine;Hazır Yemek;IMA BFB;Kolileme
+        CP Serisi;;Makine;Kahve;IMA BFB;Kolileme
+        CP Serisi;;Makine;Kuru Gıdalar;IMA BFB;Kolileme
+        CP Serisi;;Makine;Pet Food;IMA BFB;Kolileme
+        CP Serisi;;Makine;Sıvı Gıdalar;IMA BFB;Kolileme
+        CP Serisi;;Makine;Süt Ürünleri;IMA BFB;Kolileme
+        CP Serisi;;Makine;Temizlik ve Bakım Ürünleri;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Çay;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Dondurulmuş Gıdalar;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Fırın Ürünleri;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Hazır Yemek;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Kahve;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Kuru Gıdalar;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Pet Food;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Sıvı Gıdalar;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Süt Ürünleri;IMA BFB;Kolileme
+        CPV Serisi;;Makine;Temizlik ve Bakım Ürünleri;IMA BFB;Kolileme
+        CR Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Ciemme;Kutulama
+        CR Serisi;;Makine;Dondurulmuş Gıdalar;IMA Ciemme;Kutulama
+        CR Serisi;;Makine;Fırın Ürünleri;IMA Ciemme;Kutulama
+        CR Serisi;;Makine;Hazır Yemek;IMA Ciemme;Kutulama
+        CR Serisi;;Makine;Kuru Gıdalar;IMA Ciemme;Kutulama
+        CR Serisi;;Makine;Pet Food;IMA Ciemme;Kutulama
+        CSV300C;;Makine;Kahve;ICA ;Dikey Paket
+        CSV40 N Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;ICA;Dikey Paket
+        CSV40 N Serisi;;Makine;Çay;ICA ;Dikey Paket
+        CSV40 N Serisi;;Makine;Fırın Ürünleri;ICA;Dikey Paket
+        CSV40 N Serisi;;Makine;Kahve;ICA ;Dikey Paket
+        CSV40 N Serisi;;Makine;Kuru Gıdalar;ICA;Dikey Paket
+        CSV40 N Serisi;;Makine;Süt Ürünleri;ICA;Dikey Paket
+        CSV40 Paket Serisi;;Makine;Çay;ICA ;Dikey Paket
+        CSV40 Paket Serisi;;Makine;Kahve;ICA ;Dikey Paket
+        CSV40 Paket Serisi;;Makine;Kuru Gıdalar;ICA;Dikey Paket
+        CT 240;;Makine;Sıvı Gıdalar;IMA Safe;Tüp
+        CT10;;Makine;Çay;IMA Tea&Herbs;Bardak Poşet
+        CT11;;Makine;Çay;IMA Tea&Herbs;Bardak Poşet
+        CV Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Ciemme;Kutulama
+        CV Serisi;;Makine;Dondurulmuş Gıdalar;IMA Ciemme;Kutulama
+        CV Serisi;;Makine;Fırın Ürünleri;IMA Ciemme;Kutulama
+        CV Serisi;;Makine;Hazır Yemek;IMA Ciemme;Kutulama
+        CV Serisi;;Makine;Kuru Gıdalar;IMA Ciemme;Kutulama
+        CV Serisi;;Makine;Pet Food;IMA Ciemme;Kutulama
+        Delta Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Ilapak;Yatay Paket
+        Delta Serisi;;Makine;Et, Tavuk, Balık;IMA Ilapak;Yatay Paket
+        Delta Serisi;;Makine;Fırın Ürünleri;IMA Ilapak;Yatay Paket
+        Delta Serisi;;Makine;Hazır Yemek;IMA Ilapak;Yatay Paket
+        Delta Serisi;;Makine;Pet Food;IMA Ilapak;Yatay Paket
+        Dogaseptic;;Makine;Süt Ürünleri;IMA D&F Gasti;Hazır Kap
+        Dogatherm;;Makine;Süt Ürünleri;IMA D&F Gasti;Hazır Kap
+        Easysnap Serisi;;Makine;Sıvı Gıdalar;Easysnap;Sachet
+        Easysnap Serisi;;Makine;Temizlik ve Bakım Ürünleri;Easysnap;Sachet
+        Easysnap Serisi;;Makine;Temizlik ve Bakım Ürünleri;Easysnap;Sachet
+        EC12 Serisi;;Makine;Çay;IMA Maisa;Bardak Poşet
+        EC15;;Makine;Çay;IMA Maisa;Bardak Poşet
+        EC24 Serisi;;Makine;Çay;IMA Maisa;Bardak Poşet
+        Ecopack Serisi;;Makine;Süt Ürünleri;IMA Benhil;Sarma
+        EF Serisi;;Makine;Çay;IMA D&F Erca;Termoform Kap
+        EF Serisi;;Makine;Kahve;IMA D&F Erca;Termoform Kap
+        EF Serisi;;Makine;Süt Ürünleri;IMA D&F Erca;Termoform Kap
+        Effecta Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Active;Proses
+        EFS-L;;Makine;Süt Ürünleri;IMA D&F Erca;Hazır Kap
+        Ermetika;;Makine;Çay;IMA Fillshape;Doypak
+        Ermetika;;Makine;Kahve;IMA Fillshape;Doypak
+        Ermetika;;Makine;Sıvı Gıdalar;IMA Fillshape;Doypak
+        Ermetika;;Makine;Süt Ürünleri;IMA Fillshape;Doypak
+        Euro 77 Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Eurosicma;Yatay Paket
+        Euro 77 Serisi;;Makine;Sakız;IMA Eurosicma;Yatay Paket
+        Euro 88 Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Eurosicma;Yatay Paket
+        Eurofold;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Eurosicma;Yatay Paket
+        F 600;;Makine;Bisküvi, Çikolata, Şekerleme;IMA D&F Hassia;Sachet
+        F Serisi;;Makine;Sıvı Gıdalar;IMA D&F Hassia;Sachet
+        F Serisi;;Makine;Süt Ürünleri;IMA D&F Hassia;Sachet
+        Fast Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;MFP;Stick
+        Fast Serisi;;Makine;Kahve;MFP;Stick
+        Fast Serisi;;Makine;Kuru Gıdalar;MFP;Stick
+        FCW Serisi;;Makine;Sakız;IMA Gima;Kutu Dolum
+        FFS Serisi;;Makine;Gübre;Concetti;FFS Çuval
+        FFS Serisi;;Makine;Kimyasal Ürünler;Concetti;FFS Çuval
+        FFS Serisi;;Makine;Kuru Gıdalar;Concetti;FFS Çuval
+        FFS Serisi;;Makine;Pet Food;Concetti;FFS Çuval
+        FFS Serisi;;Makine;Tohum;Concetti;FFS Çuval
+        FFS Serisi;;Makine;Yem;Concetti;FFS Çuval
+        Flexline;;Makine;Süt Ürünleri;IMA D&F Hamba;Hazır Kap
+        FTB Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Gima;Kutulama
+        FTB Serisi;;Makine;Fırın Ürünleri;IMA Gima;Kutulama
+        FTB Serisi;;Makine;Kahve;IMA Gima;Kutulama
+        FTB Serisi;;Makine;Kuru Gıdalar;IMA Gima;Kutulama
+        FTB Serisi;;Makine;Sakız;IMA Gima;Kutulama
+        FTC Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Gima;Kutulama
+        FTC Serisi;;Makine;Fırın Ürünleri;IMA Gima;Kutulama
+        FTC Serisi;;Makine;Kahve;IMA Gima;Kutulama
+        FTC Serisi;;Makine;Kuru Gıdalar;IMA Gima;Kutulama
+        FTC Serisi;;Makine;Sakız;IMA Gima;Kutu Dolum
+        FTC Serisi;;Makine;Sakız;IMA Gima;Kutulama
+        FTO Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Gima;Selefon
+        FTO Serisi;;Makine;Sakız;IMA Gima;Selefon
+        GS Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Active;Proses
+        HF Serisi;;Makine;Kuru Gıdalar;ICA;Dikey Paket
+        Hywrap20;;Makine;Bisküvi, Çikolata, Şekerleme;IMA BFB;Selefon
+        Hywrap20;;Makine;Çay;IMA BFB;Selefon
+        Hywrap20;;Makine;Temizlik ve Bakım Ürünleri;IMA BFB;Selefon
+        IGF Serisi;;Makine;Gübre;Concetti;PP/Kraft/PE Çuval
+        IGF Serisi;;Makine;Kimyasal Ürünler;Concetti;PP/Kraft/PE Çuval
+        IGF Serisi;;Makine;Kuru Gıdalar;Concetti;PP/Kraft/PE Çuval
+        IGF Serisi;;Makine;Pet Food;Concetti;PP/Kraft/PE Çuval
+        IGF Serisi;;Makine;Süt Ürünleri;Concetti;PP/Kraft/PE Çuval
+        IGF Serisi;;Makine;Tohum;Concetti;PP/Kraft/PE Çuval
+        IGF Serisi;;Makine;Yem;Concetti;PP/Kraft/PE Çuval
+        Jaguar Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Record;Yatay Paket
+        Jaguar Serisi;;Makine;Fırın Ürünleri;IMA Record;Yatay Paket
+        Lux Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Ilapak;Doypak
+        Lux Serisi;;Makine;Fırın Ürünleri;IMA Ilapak;Yatay Paket
+        Lux Serisi;;Makine;Hazır Yemek;IMA Ilapak;Doypak
+        Lux Serisi;;Makine;Kuru Gıdalar;IMA Ilapak;Doypak
+        Lux Serisi;;Makine;Pet Food;IMA Ilapak;Doypak
+        Lux Serisi;;Makine;Sıvı Gıdalar;IMA Ilapak;Doypak
+        Lux Serisi;;Makine;Temizlik ve Bakım Ürünleri;IMA Ilapak;Doypak
+        M-F Serisi;;Makine;Sıvı Gıdalar;IMA D&F Erca;Termoform Kap
+        M-F Serisi;;Makine;Süt Ürünleri;IMA D&F Erca;Termoform Kap
+        Main Serisi;;Makine;Kahve;IMA Coffee Petroncini;Proses
+        MCR Serisi;;Makine;Kahve;IMA Coffee Petroncini;Proses
+        MMP400;;Makine;Bisküvi, Çikolata, Şekerleme;IMA BFB;Kolileme
+        MMP400;;Makine;Çay;IMA BFB;Kolileme
+        MMP400;;Makine;Dondurulmuş Gıdalar;IMA BFB;Kolileme
+        MMP400;;Makine;Fırın Ürünleri;IMA BFB;Kolileme
+        MMP400;;Makine;Hazır Yemek;IMA BFB;Kolileme
+        MMP400;;Makine;Kahve;IMA BFB;Kolileme
+        MMP400;;Makine;Kuru Gıdalar;IMA BFB;Kolileme
+        MMP400;;Makine;Pet Food;IMA BFB;Kolileme
+        MMP400;;Makine;Sıvı Gıdalar;IMA BFB;Kolileme
+        MMP400;;Makine;Süt Ürünleri;IMA BFB;Kolileme
+        MMP400;;Makine;Temizlik ve Bakım Ürünleri;IMA BFB;Kolileme
+        Modula ;;Makine;Çay;IMA Fillshape;Doypak
+        Modula ;;Makine;Kahve;IMA Fillshape;Doypak
+        Modula ;;Makine;Sıvı Gıdalar;IMA Fillshape;Doypak
+        Modula ;;Makine;Süt Ürünleri;IMA Fillshape;Doypak
+        MS Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA BFB;Shrink
+        MS Serisi;;Makine;Dondurulmuş Gıdalar;IMA BFB;Shrink
+        MS Serisi;;Makine;Fırın Ürünleri;IMA BFB;Shrink
+        MS Serisi;;Makine;Hazır Yemek;IMA BFB;Shrink
+        MS Serisi;;Makine;Kuru Gıdalar;IMA BFB;Shrink
+        MS Serisi;;Makine;Sıvı Gıdalar;IMA BFB;Shrink
+        MS Serisi;;Makine;Süt Ürünleri;IMA BFB;Shrink
+        MS Serisi;;Makine;Temizlik ve Bakım Ürünleri;IMA BFB;Shrink
+        Multipack Serisi;;Makine;Süt Ürünleri;IMA Benhil;Sarma
+        P Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA D&F Hassia;Termoform Porsiyon
+        P Serisi;;Makine;Sıvı Gıdalar;IMA D&F Hassia;Termoform Porsiyon
+        P Serisi;;Makine;Süt Ürünleri;IMA D&F Hassia;Termoform Porsiyon
+        Paletleme Serisi;;Makine;Gübre;Concetti;Hat Sonu
+        Paletleme Serisi;;Makine;Kimyasal Ürünler;Concetti;Hat Sonu
+        Paletleme Serisi;;Makine;Kuru Gıdalar;Concetti;Hat Sonu
+        Paletleme Serisi;;Makine;Pet Food;Concetti;Hat Sonu
+        Paletleme Serisi;;Makine;Süt Ürünleri;Concetti;Hat Sonu
+        Paletleme Serisi;;Makine;Tohum;Concetti;Hat Sonu
+        Paletleme Serisi;;Makine;Yem;Concetti;Hat Sonu
+        Panda Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Record;Yatay Paket
+        Panda Serisi;;Makine;Fırın Ürünleri;IMA Record;Yatay Paket
+        Prexima;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Active;Proses
+        Prexima;;Makine;Temizlik ve Bakım Ürünleri;IMA Active;Proses
+        Prontowash;;Makine;Temizlik ve Bakım Ürünleri;ICA ;Tablet
+        RP Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA BFB;Paletleme
+        RP Serisi;;Makine;Çay;IMA BFB;Paletleme
+        RP Serisi;;Makine;Dondurulmuş Gıdalar;IMA BFB;Paletleme
+        RP Serisi;;Makine;Fırın Ürünleri;IMA BFB;Paletleme
+        RP Serisi;;Makine;Hazır Yemek;IMA BFB;Paletleme
+        RP Serisi;;Makine;Kahve;IMA BFB;Paletleme
+        RP Serisi;;Makine;Kuru Gıdalar;IMA BFB;Paletleme
+        RP Serisi;;Makine;Pet Food;IMA BFB;Paletleme
+        RP Serisi;;Makine;Sıvı Gıdalar;IMA BFB;Paletleme
+        RP Serisi;;Makine;Süt Ürünleri;IMA BFB;Paletleme
+        RP Serisi;;Makine;Temizlik ve Bakım Ürünleri;IMA BFB;Paletleme
+        S Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA D&F Hassia;Stick
+        S Serisi;;Makine;Sıvı Gıdalar;IMA D&F Hassia;Stick
+        S Serisi;;Makine;Süt Ürünleri;IMA D&F Hassia;Stick
+        Sama;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Eurosicma;Proses
+        SB Serisi;;Makine;Kahve;IMA Coffee Packaging;Kapsül
+        SB5;;Makine;Pet Food;ICA ;Dikey Paket
+        Scorpion Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Record;Yatay Paket
+        Scorpion Serisi;;Makine;Fırın Ürünleri;IMA Record;Yatay Paket
+        Smart Cup;;Makine;Sıvı Gıdalar;IMA Fillshape;Termoform Kap
+        Smart Cup;;Makine;Süt Ürünleri;IMA Fillshape;Termoform Kap
+        Smart Cup;;Makine;Süt Ürünleri;IMA Fillshape;Termoform Kap
+        Smart Cup;;Makine;Süt Ürünleri;IMA Fillshape;Termoform Kap
+        SR Serisi;;Makine;Kahve;IMA Coffee Packaging;Kapsül
+        Standpack Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;ICA;Doypak
+        Standpack Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;ICA;Doypak
+        Standpack Serisi;;Makine;Kahve;ICA ;Doypak
+        Standpack Serisi;;Makine;Kuru Gıdalar;ICA;Doypak
+        Standpack Serisi;;Makine;Pet Food;ICA;Doypak
+        Standpack Serisi;;Makine;Süt Ürünleri;ICA;Doypak
+        SWM Serisi;;Makine;Sakız;IMA Gima;Yatay Paket
+        Teamac MD20 Serisi;;Makine;Çay;IMA R.I.;Bardak Poşet
+        Tecmar 3C Serisi;;Makine;Kahve;IMA Coffee Packaging;Dikey Paket
+        Tecmar 4C Serisi;;Makine;Kahve;IMA Coffee Packaging;Sachet
+        Tecmar Prysma 1000;;Makine;Kahve;IMA Coffee Packaging;Dikey Paket
+        Tecmar Stick Serisi;;Makine;Kahve;IMA Coffee Packaging;Stick
+        Tigre Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Record;Yatay Paket
+        Tigre Serisi;;Makine;Fırın Ürünleri;IMA Record;Yatay Paket
+        TMR Serisi;;Makine;Kahve;IMA Coffee Petroncini;Proses
+        TT Serisi;;Makine;Kahve;IMA Coffee Petroncini;Proses
+        Unika;;Makine;Kahve;IMA Coffee Packaging;Kapsül
+        Vakum Serisi;;Makine;Kahve;ICA ;Vakum Paket
+        Vakum Serisi;;Makine;Kuru Gıdalar;ICA;Vakum Paket
+        Vegatronic Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Ilapak;Dikey Paket
+        Vegatronic Serisi;;Makine;Dondurulmuş Gıdalar;IMA Ilapak;Dikey Paket
+        Vegatronic Serisi;;Makine;Et, Tavuk, Balık;IMA Ilapak;Dikey Paket
+        Vegatronic Serisi;;Makine;Fırın Ürünleri;IMA Ilapak;Dikey Paket
+        Vegatronic Serisi;;Makine;Hazır Yemek;IMA Ilapak;Dikey Paket
+        Vegatronic Serisi;;Makine;Kuru Gıdalar;IMA Ilapak;Dikey Paket
+        Vegatronic Serisi;;Makine;Meyve, Sebze;IMA Ilapak;Dikey Paket
+        Vegatronic Serisi;;Makine;Pet Food;IMA Ilapak;Dikey Paket
+        Vegatronic Serisi;;Makine;Süt Ürünleri;IMA Ilapak;Dikey Paket
+        Vegatronic Serisi;;Makine;Temizlik ve Bakım Ürünleri;IMA Ilapak;Dikey Paket
+        Flex-line;;Makine;Sıvı Gıdalar;IMA T&T;Kağıt Pipet
+        WA Serisi;;Makine;Bisküvi, Çikolata, Şekerleme;IMA Ciemme;Kutulama
+        WA Serisi;;Makine;Dondurulmuş Gıdalar;IMA Ciemme;Kutulama
+        WA Serisi;;Makine;Fırın Ürünleri;IMA Ciemme;Kutulama
+        WA Serisi;;Makine;Hazır Yemek;IMA Ciemme;Kutulama
+        WA Serisi;;Makine;Kuru Gıdalar;IMA Ciemme;Kutulama
+        WA Serisi;;Makine;Pet Food;IMA Ciemme;Kutulama
+        ";
+
+        $str = explode("\n", $str);
+
+        $brands = $this->core->QueryArray("SELECT id,`name{tr}` AS name FROM contents WHERE parent = 2334", [], PDO::FETCH_ASSOC, 'name');
+        $product = $this->core->QueryArray("SELECT id,`name{tr}` AS name FROM contents WHERE parent = 2327", [], PDO::FETCH_ASSOC, 'name');
+        $packageType = $this->core->QueryArray("SELECT id,`name{tr}` AS name FROM contents WHERE parent = 2333", [], PDO::FETCH_ASSOC, 'name');
+        $products = [];
+
+        for($i=0;$i<sizeof($str);$i++) {
+          if(empty($str[$i][0]))
+            continue;
+
+          $str[$i] = explode(';',$str[$i]);
+
+          if(!isset($packageType[$str[$i][5]])) {
+            $sql = "INSERT INTO contents
+              (`name{tr}`, `sl_module`, `parent`, `status`, `slug{tr}`)
+                VALUES
+              (
+                '{$str[$i][5]}',
+                '25',
+                2333,
+                1,
+                '".$this->core->slug($str[$i][5])."'
+              )
+              ";
+
+            $this->core->Query($sql);
+            $packageType[$str[$i][5]] = ['id' => $this->core->lastInsertId()];
+          }
+
+          if(!isset($product[$str[$i][3]])) {
+            $sql = "INSERT INTO contents
+              (`name{tr}`, `sl_module`, `parent`, `status`, `slug{tr}`)
+                VALUES
+              (
+                '{$str[$i][3]}',
+                '25',
+                2327,
+                1,
+                '".$this->core->slug($str[$i][3])."'
+              )
+              ";
+
+            $this->core->Query($sql);
+            $product[$str[$i][3]] = ['id' => $this->core->lastInsertId()];
+          }
+
+          $key = $this->core->slug(trim($str[$i][0]));
+
+          $products[$key] = array(
+            'name' => trim($str[$i][0]),
+            'nodes' => [
+              'code' => '',
+              'brand' => $brands[$str[$i][4]]['id'],
+              'packageType' => array_unique(array_merge(($products[$key]['nodes']['packageType'] ?? []), [$packageType[$str[$i][5]]['id']])),
+              'product' => array_unique(array_merge(($products[$key]['nodes']['product'] ?? []), [$product[$str[$i][3]]['id']]))
+            ]
+          );
+        }
+        exit;
+
+        /*
+        1344	2429	mname{tr}		1
+        1345	2429	mname{en}		1
+        1346	2429	code	C2000	1
+        1347	2429	product	2331	1
+        1348	2429	brand	2335	1
+        1349	2429	packageType	2376	1
+        1350	2429	content_short{tr}	450poşet/dakika hızı ile yüksek hız ve verimlilikte bardak poşet paketleme makinesi..	1
+        1351	2429	content_short{en}	"<table class=""table table-product table-striped mce-item-table""><thead><tr><th colspan=""2"" class=""upper-letter"">Ürün Özellikleri</th></tr></thead><tbody><tr><td>Poşet Türü</td><td>Bardak Poşet</td></tr><tr><td>Poşet Tipi</td><td>Körüklü</td></tr><tr><td>Makine Hızı</td><td>450/dakika</td></tr><tr><td>Zarf Tipi</td><td>Zarfsız (NB), Kağıt zarflı (COE)</td></tr><tr><td>Kutulama</td><td>Dahili</td></tr><tr><td>Filtre Kağıdı</td><td>Isı ile yapışan (HS)</td></tr><tr><td>Filtre - İp Birleştirme</td><td>Mylar Bant</td></tr></tbody></table>"	1
+        1352	2429	tags{tr}		1
+        1353	2429	tags{en}		1
+        1354	2429	index	1	1
+        1355	2429	tabs{tr}	"a:2:{s:4:""name"";a:2:{i:0;s:16:""VGVrbmlrIFZlcmk="";i:1;s:20:""TWFraW5lIFBsYW7EsQ=="";}s:4:""text"";a:2:{i:0;s:1384:""PHRhYmxlIGNsYXNzPSJ0YWJsZSB0YWJsZS1zdHJpcGVkIHRhYmxlLXByb2R1Y3QtYmlnIj4NCjx0aGVhZD4NCjx0cj4NCjx0ZCBjb2xzcGFuPSIyIj5URUNITklDQUwgREFUQSBDMjAwMDwvdGQ+DQo8L3RyPg0KPC90aGVhZD4NCjx0Ym9keT4NCjx0cj4NCjx0ZD5NYWNoaW5lIHNwZWVkIChCYWdzL21pbnV0ZSk8L3RkPg0KPHRkPlVwIHRvIDQ1MMKgPC90ZD4NCjwvdHI+DQo8dHI+DQo8dGQ+VGVhIGJhZyBjYXBhY2l0eTwvdGQ+DQo8dGQ+VXAgdG8gYXByb3hpbWF0ZWx5IDQuMCBncmFtczwvdGQ+DQo8L3RyPg0KPHRyPg0KPHRkPkZpbHRlciBiYWcgbWF4aW11bSB2b2x1bWU8L3RkPg0KPHRkPjE0LjPCoGN1YmljIGNlbnRpbWV0ZXJzPC90ZD4NCjwvdHI+DQo8dHI+DQo8dGQ+UG93ZXIgcmVxdWlyZWQ8L3RkPg0KPHRkPlRvdGFsIGluc3RhbGxlZCBwb3dlcjogMTgga1c8L3RkPg0KPC90cj4NCjx0cj4NCjx0ZCBjb2xzcGFuPSIyIj5OLmIuIFBvd2VyIGNvbnN1bXB0aW9uIGRlcGVuZHMgb24gdGhlIHRoZXJtaWMgZ3JvdXBzIGZpdHRlZCBpbiB0aGUgbWFjaGluZTwvdGQ+DQo8L3RyPg0KPHRyPg0KPHRkPkNvbXByZXNzZWQgYWlyICh3aXRob3V0IG91dGVyIGVudmVsb3BlKTwvdGQ+DQo8dGQ+DQo8cD5EdXR5IHByZXNzdXJlOiA2IGJhcjwvcD4NCjxwPkNvbnN1bXB0aW9uOiBtYXggNTAwIE5sL21pbi48L3A+DQo8cD5BaXIgc3VwcGx5IGNvbm5lY3Rpb24gMS8yIGIucC5zLjwvcD4NCjwvdGQ+DQo8L3RyPg0KPHRyPg0KPHRkPkNvbXByZXNzZWQgYWlyICh3aXRoIG91dGVyIGVudmVsb3BlKTwvdGQ+DQo8dGQ+DQo8cD5EdXR5IHByZXNzdXJlOiA2IGJhcjwvcD4NCjxwPkNvbnN1bXB0aW9uOiBtYXggNDAwIE5sL21pbi48L3A+DQo8cD5BaXIgc3VwcGx5IGNvbm5lY3Rpb24gMS8yIGIucC5zLjwvcD4NCjwvdGQ+DQo8L3RyPg0KPHRyPg0KPHRkPk1hY2hpbmUgbmV0IHdlaWdodDwvdGQ+DQo8dGQ+TWF4LiA2LDMwMCBLZzwvdGQ+DQo8L3RyPg0KPC90Ym9keT4NCjwvdGFibGU+DQo8cD48c3Ryb25nPsKgPC9zdHJvbmc+PC9wPg=="";i:1;s:260:""PHA+PGltZyBzcmM9Imh0dHBzOi8vZG9ydWt0ZWtuaWsvdXBsb2Fkcy9kYXRhLzIwMjItMDUtMDQvbWFjaGluZWxheW91dC5qcGc/MTY1MTY1MjYxMjcxNiIgYWx0PSIiIHN0eWxlPSJkaXNwbGF5OiBibG9jazsgbWFyZ2luLWxlZnQ6IGF1dG87IG1hcmdpbi1yaWdodDogYXV0bzsiIHdpZHRoPSIxMjQ5IiBoZWlnaHQ9IjE1MDAiIC8+PC9wPg=="";}}"	1
+        1356	2429	tabs{en}		1
+        1357	2429	link_option		1
+        1358	2429	link_clickable		1
+        1359	2429	sl_order		1
+        1360	2429	parameters{tr}		1
+        1361	2429	parameters{en}		1
+        1418	2429	compare_codes{tr}		1
+        1419	2429	compare_codes{en}		1
+        */
+
+        $keys = array_keys($products);
+
+        for($i=0;$i<sizeof($products);$i++) {
+          $product = $products[$keys[$i]];
+
+          $this->core->Query("INSERT INTO contents
+              (`status`, `parent`, `sl_module`, `name{tr}`, `slug{tr}`)
+            VALUES
+              (1, 2422, 24, '{$product['name']}', '{$keys[$i]}')
+          ");
+
+          $id = $this->core->lastInsertId();
+
+          $this->core->Query("INSERT INTO content_nodes
+              (`cid`, `key`, `value`)
+            VALUES
+              ({$id}, 'brand', '{$product['nodes']['brand']}')
+          ");
+
+          array_map(function($e) use($id) {
+            $this->core->Query("INSERT INTO content_nodes
+                (`cid`, `key`, `value`)
+              VALUES
+                ({$id}, 'packageType', '{$e}')
+            ");
+          }, $product['nodes']['packageType']);
+
+          array_map(function($e) use($id) {
+            $this->core->Query("INSERT INTO content_nodes
+                (`cid`, `key`, `value`)
+              VALUES
+                ({$id}, 'product', '{$e}')
+            ");
+          }, $product['nodes']['product']);
+        }
+      }

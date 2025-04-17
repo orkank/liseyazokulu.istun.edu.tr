@@ -1,0 +1,76 @@
+<div class="<%$input.grid%>">
+  <div class="form-group">
+    <label <%$input.dataAttributes%> for="<%$input.slug%>"><%$input.name%></label>
+    <%assign var="slug" value="`$input.slug`"%>
+    <%if $input.multiple == 1%>
+      <%assign var="slug" value="`$input.slug`[]"%>
+    <%/if%>
+
+    <select class="form-control p-0" id="select2Init_<%$input.slug%>"<%if $input.multiple == 1%> multiple<%/if%> name="<%$slug%>">
+      <%if $input.multiple == 1%>
+        <%foreach from=$input.values item=i%>
+          <option value="<%$i.id%>" selected><%$i.name%></option>
+        <%/foreach%>
+      <%else%>
+      <option value="<%$input.value.id%>" selected="selected"><%$input.value.name%></option>
+      <%/if%>
+    </select>
+
+    <div class="form-control-feedback"> <small></small> </div>
+  </div>
+</div>
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    $("#select2Init_<%$input.slug%>").select2({
+      placeholder: "Seçmek için arama yapabilirsiniz.",
+      allowClear: true,
+      language: "tr",
+
+      <%if $input.tags == 1%>
+        tags: true,
+      <%/if%>
+
+      ajax: {
+        url: 'content.sl.php',
+        dataType: 'json',
+        delay: 250,
+        data: function(params) {
+          return {
+            q: params.term,
+            <%foreach from=$input.params item=i key=k%>
+            <%$k%>:<%$i%>,
+            <%/foreach%>
+            parentV2: true,
+            page: params.page
+          };
+        },
+        processResults: function(data, params) {
+          // parse the results into the format expected by Select2
+          // since we are using custom formatting functions we do not need to
+          // alter the remote JSON data, except to indicate that infinite
+          // scrolling can be used
+          params.page = params.page || 1;
+
+          return {
+            results: data.items,
+            pagination: {
+              more: (params.page * 30) < data.total_count
+            }
+          };
+        },
+
+        cache: true
+      },
+
+      escapeMarkup: function(markup) {
+        return markup;
+      }, // let our custom formatter work
+
+      minimumInputLength: <%if !empty($input.minimumInputLength) OR $input.minimumInputLength == 0%><%$input.minimumInputLength%><%else%>3<%/if%>,
+      templateResult: formatRepo, // omitted for brevity, see the source of this page
+      templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+    });
+  });
+</script>

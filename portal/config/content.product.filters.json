@@ -1,0 +1,318 @@
+{
+  "table": {
+    "columns": {
+      "0": {
+        "name": "slug",
+        "type": "VARCHAR(255) NULL",
+        "serialize": "false",
+        "multilanguage": "1",
+        "index": "1"
+      },
+      "1": {
+        "name": "name",
+        "type": "VARCHAR(255) NULL",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      "2": {
+        "name": "content",
+        "type": "LONGTEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      "3": {
+        "name": "keywords",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      "4": {
+        "name": "title",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      "5": {
+        "name": "desc",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      "6": {
+        "name": "link",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      }
+    }
+  },
+
+  "tabs": {
+    "0": {
+      "name": "İçerik Bilgileri",
+      "inputs": {
+        "0": {
+          "slug": "name",
+          "name": "Filtre İsmi",
+          "type": "text",
+          "grid": "col-12 col-md-4",
+          "multilanguage": "1",
+          "keywords": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        "1": {
+          "slug": "display_name",
+          "name": "Filtre Görünen İsmi",
+          "muted": "* Opsiyonel",
+          "type": "text",
+          "grid": "col-12 col-md-4",
+          "multilanguage": "1",
+          "keywords": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        "2": {
+          "slug": "parent",
+          "name": "Kategorisi",
+          "id": "0",
+          "params": {
+            "id": "'2327,2334,2333,2428'"
+          },
+          "grid": "col-12 col-md-4",
+          "type": "parents",
+          "default_value": "0",
+          "int": "1",
+          "minimumInputLength": "0",
+          "data": {
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          },
+          "multiple": "0"
+        },
+        "3": {
+          "slug": "content_short",
+          "name": "Kısa Bilgi",
+          "muted": "",
+          "type": "textarea",
+          "keywords": "2",
+          "grid": "col-12 col-md-6",
+          "data": {
+            "editor": "0"
+          },
+          "multilanguage": "1",
+          "column": "2"
+        },
+        "4": {
+          "slug": "page_icon",
+          "module": "uploader",
+          "multi": "false",
+          "serialize": "1",
+          "grid": "col-12, col-md-6 col-lg-4",
+          "onload": "1",
+          "name": "Sayfa Simgesi",
+          "crop": "0",
+          "params": {
+          },
+          "types": {
+            "0": {"title" : "Görsel veya Video Dosyalar", "extensions" : "webp,svg,jpg,jpeg,gif,png,mp4"}
+          }
+        },
+        "5": {
+          "slug": "status",
+          "name": "Durum",
+          "column": "status",
+          "grid": "col-12",
+          "int": "1",
+          "validation": {
+            "require": "true",
+            "max": "1",
+            "type": "int"
+          },
+          "values": {
+            "0": {
+              "name": "Açık",
+              "value": "1",
+              "checked": "1"
+            },
+            "1": {
+              "name": "Kapalı",
+              "value": "2"
+            },
+            "2": {
+              "name": "Gizli",
+              "value": "3"
+            }
+          },
+          "type": "radio"
+        }
+      }
+    },
+    "1": {
+      "name": "SEO Seçenekleri",
+      "module": "seo",
+      "inputs": {
+        "0": {
+          "slug": "slug",
+          "type": "text",
+          "data": {
+            "from": "name{%prefix%}",
+            "max": "255",
+            "function": "slug"
+          },
+          "name": "URL Adresi",
+          "multilanguage": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        "1": {
+          "slug": "title",
+          "type": "text",
+          "data": {
+            "max": "65",
+            "function": "alphaLength"
+          },
+          "name": "Title",
+          "multilanguage": "1",
+          "keywords": "1"
+        },
+        "2": {
+          "slug": "desc",
+          "type": "textarea",
+          "data": {
+            "max": "155",
+            "function": "alphaLength"
+          },
+          "name": "Açıklama (Description)",
+          "multilanguage": "1",
+          "keywords": "1"
+        },
+        "3": {
+          "slug": "tags",
+          "type": "textarea",
+          "name": "Metatags",
+          "multilanguage": "1"
+        },
+        "4": {
+          "slug": "robots",
+          "name": "Arama Motorları",
+          "type": "checkbox",
+          "serialize": "0",
+          "values": {
+            "0": {
+              "slug": "index",
+              "value": "1",
+              "name": "Arama Motorlarına İzin Ver (index)",
+              "checked": "1"
+            },
+            "1": {
+              "slug": "noindex",
+              "value": "1",
+              "name": "Listelemesine İzin Verme noindex",
+              "checked": "0"
+            },
+            "2": {
+              "slug": "noarchive",
+              "value": "1",
+              "name": "Arşivlemesine İzin Verme (noarchive)",
+              "checked": "0"
+            },
+            "3": {
+              "slug": "nosnippet",
+              "value": "1",
+              "name": "Listelemede Önizlemeye İzin Verme (nosnippet)",
+              "checked": "0"
+            },
+            "4": {
+              "slug": "notranslate",
+              "value": "1",
+              "name": "Bu Sayfanın Dil Çevirimine İzin Verme (notranslate)",
+              "checked": "0"
+            },
+            "5": {
+              "slug": "noimageindex",
+              "value": "1",
+              "name": "Görsel İçeriklerin Listelenmesine İzin Verme (noimageindex)",
+              "checked": "0"
+            },
+            "6": {
+              "slug": "nofollow",
+              "value": "1",
+              "name": "Bu Sayfadaki Linkleri Takip Etme (nofollow)",
+              "checked": "0"
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "name": "Görselleri",
+      "inputs": {
+        "0": {
+          "name": "Galeri",
+          "desc": "MP4, JPG, JPEG, PNG, GIF, PDF dosyalarını yükleyebilirsiniz.",
+          "module": "images",
+          "grid": "col-12",
+          "resize": {
+            "0": {
+              "width": "285",
+              "height": "200",
+              "quality": "80"
+            },
+            "1": {
+              "width": "600",
+              "height": "450",
+              "quality": "80"
+            }
+          },
+          "width": "2500",
+          "height": "2500",
+          "crop": "0",
+          "maxfilesize": "50mb",
+          "multi": "true",
+          "multilanguage": "0",
+          "slug": "images",
+          "type": "images",
+          "values": {
+            "0": {
+              "slug": "title",
+              "type": "text",
+              "name": "Title Tag"
+            },
+            "1": {
+              "slug": "alt",
+              "type": "text",
+              "name": "Alt Tag"
+            }
+          }
+        }
+      }
+    },
+    "3": {
+      "name": "Parametreler",
+      "inputs": {
+        "0": {
+          "grid": "col-12",
+          "name": "Parametreler",
+          "multilanguage": "1",
+          "editor": "0",
+          "desc": "",
+          "module": "accordion",
+          "slug": "parameters",
+          "type": "accordions"
+        }
+      }
+    }
+  }
+}

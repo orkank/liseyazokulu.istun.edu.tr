@@ -1,0 +1,8 @@
+workspace
+.history
+.DS_Store
+.env
+vendor
+portal/cache
+cache
+portal/templates_c

@@ -1,0 +1,12 @@
+<div class="<%$input.grid%>">
+<div class="form-group">
+  <label for="<%$input.slug%>"><%$input.name%></label>
+  <select class="form-control p-0" id="<%$input.slug%>" <%$input.dataAttributes%> name="<%$input.slug%>">
+    <option value=""><%tr%>Seçiniz<%/tr%></option>
+    <%foreach from=$input.options item=i%>
+    <option value="<%$i%>"<%if isset($data[$input.slug]) AND $i == $data[$input.slug]%> selected="selected"<%/if%>><%$i%></option>
+    <%/foreach%>
+  </select>
+  <div class="form-control-feedback"> <small></small> </div>
+</div>
+</div>

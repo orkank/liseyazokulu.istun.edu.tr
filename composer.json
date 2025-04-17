@@ -1,0 +1,44 @@
+{
+  "name": "orkan/lisekisokulu",
+  "license": "",
+  "description": "",
+  "authors": [
+    {
+      "name": "Orkan Köylü",
+      "email": "orkan.koylu@gmail.com"
+    }
+  ],
+  "config": {
+    "vendor-dir": "./system/vendor/",
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+
+
+  "require": {
+    "php": "~7.4.0",
+    "smarty/smarty": "3.1.11",
+    "verot/class.upload.php": "2.0",
+    "moneyphp/money": "3.3",
+    "mobiledetect/mobiledetectlib": "2.8",
+    "html2text/html2text": "4.3",
+    "google/recaptcha": "1.2",
+
+    "ozdemir/datatables": "2.*",
+    "rawr/t-regx": "*",
+    "mos/cimage": "0.7.20",
+    "phpmailer/phpmailer": "6.5",
+    "phpoffice/phpspreadsheet": "^1.18.0",
+    "psr/simple-cache": "^1.0"
+  },
+  "suggest": {
+    "ext-memcache": "*",
+    "ext-memcached": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "master\\": "./system/src/master"
+    }
+  }
+}

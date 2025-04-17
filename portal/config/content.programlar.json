@@ -1,0 +1,293 @@
+{
+  "table": {
+    "columns": [
+      {
+        "name": "slug",
+        "type": "VARCHAR(255) NULL",
+        "serialize": "false",
+        "multilanguage": "1",
+        "index": "1"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(255) NULL",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      {
+        "name": "content",
+        "type": "LONGTEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      {
+        "name": "keywords",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      {
+        "name": "title",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      {
+        "name": "desc",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      },
+      {
+        "name": "link",
+        "type": "TEXT",
+        "serialize": "false",
+        "multilanguage": "1"
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "name": "İçerik Bilgileri",
+      "inputs": [
+        {
+          "slug": "name",
+          "name": "Program İsmi",
+          "type": "text",
+          "grid": "col-4",
+          "multilanguage": "1"
+        },
+        {
+          "slug": "price",
+          "name": "Program Ücreti",
+          "type": "text",
+          "grid": "col-4",
+          "multilanguage": "1"
+        },
+        {
+          "slug": "date",
+          "name": "Program Tarihi (Arayüzde Görünür)",
+          "type": "text",
+          "grid": "col-4"
+        },
+        {
+          "slug": "quota",
+          "name": "Kontenjan",
+          "type": "text",
+          "grid": "col-4"
+        },
+        {
+          "slug": "sertifika_kodu",
+          "name": "Sertifika Kodu",
+          "type": "text",
+          "grid": "col-4"
+        },
+        {
+          "slug": "faculty",
+          "name": "Düzenleyen Fakülte",
+          "type": "text",
+          "grid": "col-8"
+        },
+        {
+          "slug": "start_date",
+          "name": "Başlangıç Tarihi",
+          "type": "datepicker",
+          "data": {
+            "style": "popup",
+            "todayHighlight": "1"
+          },
+          "grid": "col-4"
+        },
+        {
+          "slug": "end_date",
+          "name": "Bitiş Tarihi",
+          "type": "datepicker",
+          "data": {
+            "style": "popup",
+            "todayHighlight": "1"
+          },
+          "grid": "col-4"
+        },
+
+        {
+          "slug": "description",
+          "name": "Kısa Açıklaması",
+          "type": "textarea",
+          "keywords": "2",
+          "data": {
+            "editor": "0"
+          },
+          "multilanguage": "1",
+          "column": "2"
+        },
+
+        {
+          "slug": "content",
+          "name": "Açıklaması",
+          "type": "textarea",
+          "keywords": "2",
+          "data": {
+            "editor": "2"
+          },
+          "multilanguage": "1",
+          "column": "2"
+        },
+        {
+          "slug": "status",
+          "name": "Durum",
+          "column": "status",
+          "grid": "col-12",
+          "int": "1",
+          "validation": {
+            "require": "true",
+            "max": "1",
+            "type": "int"
+          },
+          "values": {
+            "0": {
+              "name": "Açık",
+              "value": "1",
+              "checked": "1"
+            },
+            "1": {
+              "name": "Kapalı",
+              "value": "2"
+            },
+            "2": {
+              "name": "Gizli",
+              "value": "3"
+            }
+          },
+          "type": "radio"
+        }
+      ]
+    },
+    {
+      "name": "Görseller",
+      "inputs": [
+        {
+          "slug": "page_video",
+          "module": "uploader",
+          "multi": "false",
+          "serialize": "1",
+          "grid": "col-12, col-md-6 col-lg-4",
+          "onload": "1",
+          "name": "Video",
+          "crop": "0",
+          "params": {},
+          "types": {
+            "0": {
+              "title": "Görsel veya Video Dosyalar",
+              "extensions": "webp,svg,jpg,jpeg,gif,png,mp4"
+            }
+          }
+        },
+        {
+          "slug": "page_image",
+          "module": "uploader",
+          "multi": "false",
+          "serialize": "1",
+          "grid": "col-12, col-md-6 col-lg-4",
+          "onload": "1",
+          "name": "Sayfa Görsel",
+          "crop": "0",
+          "params": {},
+          "types": {
+            "0": {
+              "title": "Görsel veya Video Dosyalar",
+              "extensions": "webp,svg,jpg,jpeg,gif,png,mp4"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Galeri",
+      "inputs": [
+        {
+          "name": "Galeri",
+          "desc": "MP4, JPG, JPEG, PNG, GIF, PDF dosyalarını yükleyebilirsiniz.",
+          "module": "images",
+          "width": "2500",
+          "height": "2500",
+          "grid": "col-12",
+          "crop": "0",
+          "maxfilesize": "50mb",
+          "multi": "true",
+          "resize": [
+            {
+              "width": 512,
+              "height": 512,
+              "quality": 80
+            }
+          ],
+          "multilanguage": "1",
+          "slug": "images",
+          "type": "images",
+          "values": [
+            {
+              "slug": "title",
+              "type": "text",
+              "name": "Üst Başlık"
+            },
+            {
+              "slug": "desc",
+              "type": "text",
+              "name": "Alt Başlık"
+            },
+            {
+              "slug": "link",
+              "type": "text",
+              "name": "Bağlantı"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sekmeler",
+      "inputs": {
+        "0": {
+          "grid": "col-12",
+          "name": "Sekmeler",
+          "desc": "",
+          "editor": "2",
+          "multilanguage": "1",
+          "module": "accordion",
+          "slug": "tabs",
+          "type": "accordions"
+        }
+      }
+    },
+    {
+      "name": "Akordiyon",
+      "inputs": {
+        "0": {
+          "grid": "col-12",
+          "name": "Akordiyonlar",
+          "desc": "",
+          "editor": "2",
+          "multilanguage": "1",
+          "module": "accordion",
+          "slug": "accordions",
+          "type": "accordions"
+        }
+      }
+    },
+    {
+      "name": "Parametreler",
+      "inputs": {
+        "0": {
+          "grid": "col-12",
+          "name": "Parametreler",
+          "multilanguage": "1",
+          "editor": "0",
+          "desc": "",
+          "module": "accordion",
+          "slug": "parameters",
+          "type": "accordions"
+        }
+      }
+    }
+  ]
+}

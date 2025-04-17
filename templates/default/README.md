@@ -1,0 +1,1 @@
+# lisekisokulu.istun.edu.tr

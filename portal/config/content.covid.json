@@ -1,0 +1,124 @@
+{
+  "tabs": {
+    "0": {
+      "name": "Covid Item",
+      "inputs": {
+        "0": {"slug":"name", "name":"Başlık", "type":"text", "multilanguage": "1", "keywords": "1",
+          "validation":{
+            "require":"true",
+            "max":"255",
+            "type":"string"
+          }
+        },
+        "1": {"slug":"content", "name":"İçeriği", "type":"textarea", "keywords": "2",
+          "data": {
+            "editor": "1",
+            "editor-advanced":"0"
+          }, "multilanguage": "1", "column": "2"},
+
+        "2": {"slug":"ndate", "name":"Yayın Tarihi", "type":"datepicker",
+          "data": {
+            "style": "inline",
+            "todayHighlight": "1"
+          },
+          "validation":{
+            "require":"true"
+          }
+        },
+
+        "3": {"slug":"preview", "name":"Önizleme Fotoğrafı",
+          "module": "uploader",
+          "width":"530",
+          "height": "550",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "multi":"false",
+          "serialize":"1",
+          "types": {
+            "0": {"title" : "Görsel Dosyalar", "extensions" : "jpg,gif,png"}
+          }
+        },
+
+        "4": {"slug":"gallery", "name":"Fotoğrafları",
+          "module": "uploader",
+          "width":"1920",
+          "height": "900",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "multi":"true",
+          "serialize":"1",
+          "types": {
+            "0": {"title" : "Görsel Dosyalar", "extensions" : "jpg,gif,png"}
+          }
+        },
+
+        "5": {"slug":"parent", "name":"Üst Bağlantı", "id":"0", "type":"parents",
+          "data": {
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          }, "multiple":"0"},
+        "6": {"slug":"status","name":"Durum", "column": "status", "int":"1",
+          "validation": {
+            "require":"true",
+            "max":"255",
+            "type":"int"
+          },
+          "values": {
+            "0":{"name":"Açık","value":"1","checked":"1"},
+            "1":{"name":"Kapalı","value":"2"},
+            "2":{"name":"Gizli","value":"3"}
+          }, "type":"radio"}
+      }
+    },
+    "1": {
+      "name": "SEO Seçenekleri",
+      "module": "seo",
+      "inputs": {
+        "0": {"slug":"slug", "type":"text",
+          "data":{"from": "name{%prefix%}", "max": "255", "function":"slug"},
+          "name":"URL Adresi", "multilanguage": "1",
+          "validation":{
+            "require":"true",
+            "max":"255",
+            "type":"string"
+          }
+        },
+        "1": {"slug":"title", "type":"text", "data":{"max": "65", "function":"alphaLength"}, "name":"Title", "multilanguage": "1", "keywords": "1"},
+        "2": {"slug":"desc", "type":"textarea", "data":{"max": "155", "function":"alphaLength"}, "name":"Açıklama (Description)", "multilanguage": "1", "keywords": "1"}
+      }
+    },
+    "2": {
+      "name": "Sıralama",
+      "module": "subpages",
+      "parent": "module"
+    },
+    "3": {
+      "name": "Diğer Seçenekler",
+      "inputs": {
+        "0": {"slug":"link", "name":"Dış Bağlantı", "type":"text", "multilanguage":"1"},
+        "1": {"slug":"link_option","name":"Bağlantı Seçeneği",
+          "values": {
+            "0":{"name":"Yeni Pencere","value":"1"},
+            "1":{"name":"İç Bağlantı","value":"2"},
+            "2":{"name":"Kapalı","value":"3"}
+          }, "type":"radio"},
+        "2": {"slug":"default","name":"Açılış Sayfası", "value":"1", "checked": "0", "type":"switch", "int":"1",
+          "values": {"off": "Hayır", "on": "Evet"}
+        },
+        "3": {"slug":"sl_template", "name":"Şablon", "type":"templates",
+          "data": {
+            "style": "btn-primary",
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          }
+        },
+        "4": {"slug":"editor_note", "name":"Editör Notu", "type":"textarea"}
+
+      }
+    }
+  }
+}

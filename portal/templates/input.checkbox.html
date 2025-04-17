@@ -1,0 +1,13 @@
+<div class="<%$input.grid%>">
+  <div class="form-group">
+  <label class="d-block"><%tr%><%$input.name%><%/tr%></label>
+
+  <%foreach from=$input.values item=i%>
+    <input type="checkbox" id="<%$i.uniq%>" class="filled-in chk-col-blue"
+      value="<%$i.value%>" name="<%$i.slug%>" <%$i.checked%>>
+    <label class="sl_checkbox col-xs-12" for="<%$i.uniq%>"><%tr%><%$i.name%><%/tr%></label>
+  <%/foreach%>
+
+  <div class="form-control-feedback"> <small></small> </div>
+  </div>
+</div>

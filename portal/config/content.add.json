@@ -1,0 +1,170 @@
+{
+  "table": {
+    "columns": {
+      "0": {"name": "slug", "type": "VARCHAR(255) NULL", "serialize": "false", "multilanguage": "1", "index": "1"},
+      "1": {"name": "name", "type": "VARCHAR(255) NULL", "serialize": "false", "multilanguage": "1"},
+      "2": {"name": "content", "type": "LONGTEXT", "serialize": "false", "multilanguage": "1"},
+      "3": {"name": "keywords", "type": "TEXT", "serialize": "false", "multilanguage": "1"},
+      "4": {"name": "title", "type": "TEXT", "serialize": "false", "multilanguage": "1"},
+      "5": {"name": "desc", "type": "TEXT", "serialize": "false", "multilanguage": "1"},
+      "6": {"name": "link", "type": "TEXT", "serialize": "false", "multilanguage": "1"}
+    }
+  },
+
+  "tabs": {
+    "0": {
+      "name": "İçerik Bilgileri",
+      "inputs": {
+        "0": {"slug":"name", "name":"İçerik Başlık", "type":"text", "multilanguage": "1", "keywords": "1",
+          "validation":{
+            "require":"true",
+            "max":"255",
+            "type":"string"
+          }
+        },
+        "1": {"slug":"content", "name":"İçerik Bilgileri", "type":"textarea", "keywords": "2",
+          "data": {
+            "editor": "1",
+            "editor-advanced":"1"
+          }, "multilanguage": "1", "column": "2"},
+        "2": {"slug":"parent", "name":"Üst Bağlantı", "id":"0", "type":"parents",
+          "data": {
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          }, "multiple":"0"},
+        "3": {"slug":"status","name":"Durum", "column": "status", "int":"1",
+          "validation": {
+            "require":"true",
+            "max":"1",
+            "type":"int"
+          },
+          "values": {
+            "0":{"name":"Açık","value":"1","checked":"1"},
+            "1":{"name":"Kapalı","value":"2"},
+            "2":{"name":"Gizli","value":"3"}
+          }, "type":"radio"}
+      }
+    },
+    "1": {
+      "name": "Görseller",
+      "inputs": {
+        "0": {"slug":"background", "name":"Arkaplan Görseli",
+          "module": "uploader",
+          "width":"1920",
+          "height": "900",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "multi":"true",
+          "multilanguage":"1",
+          "serialize":"1",
+          "types": {
+            "0": {"title" : "Görsel Dosyalar", "extensions" : "jpg,gif,png"}
+          }
+        },
+        "1": {"slug":"thumbnail",
+          "module": "uploader",
+          "multi":"false",
+          "serialize":"1",
+          "name":"Önizleme Görseli", "width":"400", "height": "400", "crop": "1"}
+      }
+    },
+    "2": {
+      "name": "Galeri",
+      "inputs": {
+        "0": {
+          "name": "Galeri",
+          "desc": "MP4, JPG, JPEG, PNG, GIF, PDF dosyalarını yükleyebilirsiniz.",
+          "module": "images",
+          "width":"1920",
+          "height": "900",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "multi":"true",
+          "multilanguage":"1",
+          "slug":"images",
+          "type":"images",
+          "values": {
+            "0": {"slug":"title","type":"text","name":"Başlık"},
+            "1": {"slug":"desc","type":"text","name":"Açıklama"},
+            "2": {"slug":"email","type":"text","name":"E-posta Adresi"}
+          }
+        }
+      }
+    },
+    "3": {
+      "name": "Akordiyon İçerik",
+      "module": "accordion"
+    },
+    "4": {
+      "name": "SEO Seçenekleri",
+      "module": "seo",
+      "inputs": {
+        "0": {"slug":"slug", "type":"text",
+          "data":{"from": "name{%prefix%}", "max": "255", "function":"slug"},
+          "name":"URL Adresi", "multilanguage": "1",
+          "validation":{
+            "require":"true",
+            "max":"255",
+            "type":"string"
+          }
+        },
+        "1": {"slug":"title", "type":"text", "data":{"max": "65", "function":"alphaLength"}, "name":"Title", "multilanguage": "1", "keywords": "1"},
+        "2": {"slug":"desc", "type":"textarea", "data":{"max": "155", "function":"alphaLength"}, "name":"Açıklama (Description)", "multilanguage": "1", "keywords": "1"},
+        "3": {"slug":"tags", "type":"textarea", "name":"Metatags", "multilanguage": "1"},
+        "4": {"slug":"robots","name":"Arama Motorları", "type":"checkbox", "serialize":"0",
+          "values": {
+            "0": {"slug":"index", "value":"1", "name": "Arama Motorlarına İzin Ver (index)", "checked":"1"},
+            "1": {"slug":"noindex", "value":"1", "name": "Listelemesine İzin Verme noindex", "checked":"0"},
+            "2": {"slug":"noarchive", "value":"1", "name": "Arşivlemesine İzin Verme (noarchive)", "checked":"0"},
+            "3": {"slug":"nosnippet", "value":"1", "name": "Listelemede Önizlemeye İzin Verme (nosnippet)", "checked":"0"},
+            "4": {"slug":"notranslate", "value":"1", "name": "Bu Sayfanın Dil Çevirimine İzin Verme (notranslate)", "checked":"0"},
+            "5": {"slug":"noimageindex", "value":"1", "name": "Görsel İçeriklerin Listelenmesine İzin Verme (noimageindex)", "checked":"0"},
+            "6": {"slug":"nofollow", "value":"1", "name": "Bu Sayfadaki Linkleri Takip Etme (nofollow)", "checked":"0"}
+          }
+        }
+      }
+    },
+    "5": {
+      "name": "Diğer Seçenekler",
+      "inputs": {
+        "0": {"slug":"sl_module", "name":"Modül", "type":"modules", "data_parent":"4", "data_type": "2", "int":"1",
+          "data": {
+            "style": "btn-danger",
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          }
+        },
+        "1": {"slug":"sl_template", "name":"Şablon", "type":"templates",
+          "data": {
+            "style": "btn-primary",
+            "function": "parents",
+            "select-picker": "",
+            "show-subtext": "true",
+            "live-search": "true"
+          }
+        },
+        "2": {"slug":"link", "name":"Dış Bağlantı", "type":"text", "multilanguage":"1"},
+        "3": {"slug":"link_option","name":"Bağlantı Seçeneği",
+          "values": {
+            "0":{"name":"Yeni Pencere","value":"1"},
+            "1":{"name":"İç Bağlantı","value":"2"},
+            "2":{"name":"Kapalı","value":"3"}
+          }, "type":"radio"},
+        "4": {"slug":"default","name":"Açılış Sayfası", "value":"1", "checked": "0", "type":"switch", "int":"1",
+          "values": {"off": "Hayır", "on": "Evet"}
+        },
+        "5": {"slug":"editor_note", "name":"Editör Notu", "type":"textarea"},
+        "6": {"slug":"sl_order", "name":"Sıralama", "type":"sl.order","implode":",",
+          "data": {
+            "style": "btn-primary",
+            "onload": "1"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "tabs": {
+    "0": {
+      "name": "Bilgileri",
+      "inputs": [
+        {
+          "slug": "name",
+          "name": "İsim",
+          "type": "text",
+          "multilanguage": "1",
+          "keywords": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        {
+          "slug": "content_short",
+          "grid": "col-12 col-md-6",
+          "name": "Metin",
+          "type": "textarea",
+          "keywords": "2",
+          "data": {
+            "editor": "0"
+          },
+          "multilanguage": "1",
+          "column": "2"
+        },
+        {
+          "slug": "ndate",
+          "grid": "col-12 col-md-6",
+          "name": "Tarih",
+          "type": "datepicker",
+          "data": {
+            "style": "inline",
+            "todayHighlight": "1"
+          },
+          "validation": {
+            "require": "true"
+          }
+        },
+        {
+          "slug": "preview",
+          "name": "Fotoğraf",
+          "module": "uploader",
+          "width": "530",
+          "height": "550",
+          "crop": "0",
+          "maxfilesize": "10mb",
+          "grid": "col-6",
+          "multi": "false",
+          "serialize": "1",
+          "types": {
+            "0": {
+              "title": "Görsel Dosyalar",
+              "extensions": "jpg,jpeg,gif,png"
+            }
+          }
+        },
+        {
+          "slug": "status",
+          "name": "Durum",
+          "column": "status",
+          "int": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "int"
+          },
+          "values": {
+            "0": {
+              "name": "Açık",
+              "value": "1",
+              "checked": "1"
+            },
+            "1": {
+              "name": "Kapalı",
+              "value": "2"
+            },
+            "2": {
+              "name": "Gizli",
+              "value": "3"
+            }
+          },
+          "type": "radio"
+        }
+      ]
+    },
+    "1": {
+      "name": "SEO Seçenekleri",
+      "module": "seo",
+      "inputs": {
+        "0": {
+          "slug": "slug",
+          "type": "text",
+          "data": {
+            "from": "name{%prefix%}",
+            "max": "255",
+            "function": "slug"
+          },
+          "name": "URL Adresi",
+          "multilanguage": "1",
+          "validation": {
+            "require": "true",
+            "max": "255",
+            "type": "string"
+          }
+        },
+        "1": {
+          "slug": "title",
+          "type": "text",
+          "data": {
+            "max": "65",
+            "function": "alphaLength"
+          },
+          "name": "Title",
+          "multilanguage": "1",
+          "keywords": "1"
+        },
+        "2": {
+          "slug": "desc",
+          "type": "textarea",
+          "data": {
+            "max": "155",
+            "function": "alphaLength"
+          },
+          "name": "Açıklama (Description)",
+          "multilanguage": "1",
+          "keywords": "1"
+        }
+      }
+    },
+    "2": {
+      "name": "Diğer Seçenekler",
+      "inputs": {
+        "0": {
+          "slug": "link",
+          "name": "Dış Bağlantı",
+          "type": "text",
+          "multilanguage": "1"
+        },
+        "1": {
+          "slug": "link_option",
+          "name": "Bağlantı Seçeneği",
+          "values": {
+            "0": {
+              "name": "Yeni Pencere",
+              "value": "1"
+            },
+            "1": {
+              "name": "İç Bağlantı",
+              "value": "2"
+            },
+            "2": {
+              "name": "Kapalı",
+              "value": "3"
+            }
+          },
+          "type": "radio"
+        },
+        "2": {
+          "slug": "default",
+          "name": "Açılış Sayfası",
+          "value": "1",
+          "checked": "0",
+          "type": "switch",
+          "int": "1",
+          "values": {
+            "off": "Hayır",
+            "on": "Evet"
+          }
+        },
+        "3": {
+          "slug": "editor_note",
+          "name": "Editör Notu",
+          "type": "textarea"
+        }
+      }
+    }
+  }
+}

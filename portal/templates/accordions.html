@@ -1,0 +1,113 @@
+<div class="<%$input.grid%>">
+
+
+<div class="card" id="accordion_wrapper_<%$input.slug%>">
+  <div class="card-header">
+    <h4 class="card-title m-0"> <%$input.name%> </h4>
+    <p class="card-text"> <%$input.desc%> </p>
+  </div>
+  <%if $input.multilanguage == '1'%>
+  <ul class="nav nav-tabs customtab" role="tablist">
+    <%foreach from=$langs item=i key=k%>
+    <li class="nav-item"> <a data-lang="<%$i.prefix|lower%>" class="nav-link<%if $k == 0%> active<%/if%>" data-toggle="tab" href="#accordion_<%$input.slug%>_<%$i.prefix%>_tab" role="tab">
+      <span class="hidden-sm-up"><%$i.prefix%></span> <span class="hidden-xs-down"><%$i.name%></span></a>
+    </li>
+    <%/foreach%>
+  </ul>
+  <%/if%>
+
+  <div class="tab-content">
+    <!--
+    <input type="hidden" name="images_uniq[<%$uploader.slug%>]" value="<%$uploader.uniq_%>">
+    -->
+    <%if $input.multilanguage == '1'%>
+    <%foreach from=$langs item=i key=k%>
+      <script type="text/html" id="accordion_<%$input.slug%>_<%$i.prefix%>_tab_js">
+        <div class="item p-2">
+          <div class="row">
+
+            <div class="col-8">
+              <input type="text" name="<%$input.slug%>{<%$i.prefix%>}[name][]" placeholder="Başlık" class="form-control">
+            </div>
+            <div class="col-4">
+              <button type="button" data-accordion-remove class="btn btn-secondary">Sil</button>
+            </div>
+
+            <div class="col-12 mt-3">
+              <textarea data-editor="<%$input.editor%>" name="<%$input.slug%>{<%$i.prefix%>}[text][]" class="form-control" placeholder="İçerik"></textarea>
+            </div>
+          </div>
+        </div>
+      </script>
+
+      <div role="tabpanel" class="tab-pane<%if $k == 0%> active<%/if%>" id="accordion_<%$input.slug%>_<%$i.prefix%>_tab">
+        <div class="p-0">
+          <div class="card-body" id="accordion_<%$input.slug%>_<%$i.prefix%>_container" style="position: relative;">
+            <div class="alert alert-info"><%tr%>Modül Hazır<%/tr%></div>
+
+            <div id="accordions_<%$input.slug%>_<%$i.prefix%>" class="sl-gallery col-md-12">
+              <%if !empty($accordion_data_<%$i.prefix%>)%>
+              <%foreach from=$accordion_data_<%$i.prefix%>.name item=s key=value_k%>
+                <div class="item p-2">
+                  <div class="row">
+
+                    <div class="col-8">
+                      <input type="text" name="<%$input.slug%>{<%$i.prefix%>}[name][]" value="<%$s%>" placeholder="Başlık" class="form-control">
+                    </div>
+                    <div class="col-4">
+                      <button type="button" data-accordion-remove class="btn btn-secondary">Sil</button>
+                    </div>
+
+                    <div class="col-12 mt-3">
+                      <textarea data-editor="<%$input.editor%>"
+                        name="<%$input.slug%>{<%$i.prefix%>}[text][]" class="form-control"
+                        placeholder="İçerik"><%$accordion_data_<%$i.prefix%>['text'][$value_k]%></textarea>
+                    </div>
+                  </div>
+                </div>
+              <%/foreach%>
+              <%/if%>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-add="#accordions_<%$input.slug%>_<%$i.prefix%>" data-tpl="#accordion_<%$input.slug%>_<%$i.prefix%>_tab_js">Yeni Ekle</button>
+          </div>
+        </div>
+      </div>
+    <%/foreach%>
+    <%else%>
+    <div role="tabpanel" class="tab-pane active" id="<%$uploader.uniq%>_div">
+      <div class="p-0">
+        <div class="card-body" id="<%$uploader.uniq%>_<%$input.slug%>_container" style="position: relative;">
+          <div id="<%$uploader.uniq%>_<%$input.slug%>_console" class="alert alert-info"><%tr%>Modül Hazır<%/tr%></div>
+
+          <div id="<%$uploader.uniq%>_<%$input.slug%>_accordions" class="sl-gallery col-md-12">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <%/if%>
+  </div>
+</div>
+</div>
+<script>
+window.addEventListener('load', (event) => {
+
+  var wrapper = $(document).find('#accordion_wrapper_<%$input.slug%>');
+
+  $(document).on('click', '#accordion_wrapper_<%$input.slug%> button[data-accordion-remove]', function(){
+    $(this).parents('.item').remove();
+    return false;
+  });
+
+  $('#accordion_wrapper_<%$input.slug%> button[data-add]').on('click', function(){
+    var target = $(this).data('add');
+    var tpl_id = $(this).data('tpl');
+    var tpl = $($(tpl_id)).html();
+
+    $(target).append(tpl);
+    sl.editorRefresh();
+    return false;
+  });
+});
+</script>

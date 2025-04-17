@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
+    "sweetalert2": "^11.15.0",
+    "vanilla-calendar-pro": "^3.0.0"
+  }
+}
