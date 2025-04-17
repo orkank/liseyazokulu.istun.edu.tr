@@ -7,7 +7,7 @@
       <div class="row gy-6 gy-lg-0">
         <div class="col-md-4 col-lg-3">
           <div class="widget">
-            <img class="mb-4" src="{%$settings.asset%}img/logo.png?v=.02" style="max-width: 200px;" srcset="{%$settings.asset%}img/logo@2x?v=.02.png 2x" alt="" />
+            <!-- <img class="mb-4" src="{%$settings.asset%}img/logo.png?v=.02" style="max-width: 200px;" srcset="{%$settings.asset%}img/logo@2x?v=.02.png 2x" alt="" /> -->
             <p class="mb-4">© <script> document.write(new Date().getUTCFullYear()); </script> İstanbul Sağlık ve Teknoloji Üniversitesi. <br class="d-none d-lg-block" />Tüm hakları saklıdır.</p>
             <nav class="nav social">
               <a href="#"><i class="uil uil-twitter"></i></a>
@@ -25,7 +25,7 @@
           <div class="widget">
             <h4 class="widget-title  mb-3">Bize Ulaşın</h4>
             <address class="pe-xl-15 pe-xxl-17">Sütlüce Mah. İmrahor Cad. No: 82 Beyoğlu – İstanbul</address>
-            <a href="mailto:lisekisokulu@istun.edu.tr" class="link-body">lisekisokulu@istun.edu.tr</a><br /> 444 3 788
+            <a href="mailto:liseyazokulu@istun.edu.tr" class="link-body">liseyazokulu@istun.edu.tr</a><br /> 444 3 788
           </div>
           <!-- /.widget -->
         </div>
@@ -35,8 +35,8 @@
             <h4 class="widget-title  mb-3">Daha Fazla Bilgi</h4>
             <ul class="list-unstyled text-reset mb-0">
               <li><a href="https://www.istun.edu.tr">İSTÜN</a></li>
-              <li><a href="https://lisekisokulu.istun.edu.tr/tr/ticari-elektronik-ileti-onay-formu-2670"></a></li>
-              <li><a href="https://lisekisokulu.istun.edu.tr/tr/aydinlatma-metni-2669"></a></li>
+              <li><a href="https://liseyazokulu.istun.edu.tr/tr/ticari-elektronik-ileti-onay-formu-2670"></a></li>
+              <li><a href="https://liseyazokulu.istun.edu.tr/tr/aydinlatma-metni-2669"></a></li>
             </ul>
           </div>
           <!-- /.widget -->
